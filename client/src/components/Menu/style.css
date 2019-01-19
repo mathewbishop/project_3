@@ -1,0 +1,46 @@
+.btnGroup {
+    background: #fff;
+    text-align: center;
+    height: 60px;
+    border-radius: 0;
+}
+
+.homeBtn {
+    background-color: #9FEDD7;
+    width: 100px;
+    border-radius: 0;
+    border:none;
+    height: 100%;
+}
+
+.remBtn {
+    background-color: #058a96;
+    width: 100px;
+    border-radius: 0;
+    border:none;
+    height: 100%;
+}
+
+.contBtn {
+    background-color: rgb(167, 166, 164);
+    width: 100px;
+    border-radius: 0;
+    border: none;
+    height: 100%;
+}
+
+.emerBtn {
+    background-color: #ECE181;
+    width: 100px;
+    border-radius: 0;
+    border: none;
+    height: 100%;
+}
+
+.wrapper {
+    display: block;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}

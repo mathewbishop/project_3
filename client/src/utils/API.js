@@ -6,7 +6,7 @@ export default {
         return axios.get("/api/pets");
     },
 
-    getPets: function() {
+    getPets: function(id) {
         return axios.get("/api/pets" + id);
     },
 
