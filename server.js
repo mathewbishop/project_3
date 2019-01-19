@@ -37,8 +37,9 @@ if (process.env.NODE_ENV === "production") {
 //============================================================
 // Routes
 //============================================================
-app.use(app.router);
-routes.initialize(app);
+app.use(routes)
+// app.use(app.router);
+// routes.initialize(app);
 //============================================================
 // Send every other request to the React app
 //============================================================
