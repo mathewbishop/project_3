@@ -1,24 +1,49 @@
+//============================================================
+// Dependencies
+//============================================================
 const express = require("express");
 const path = require("path");
-const PORT = process.env.PORT || 3001;
 const app = express();
-
-// Define middleware here
+const mongoose = require("mongoose");
+const routes = require("./controller/routes");
+//============================================================
+// PORT 
+//============================================================
+const PORT = process.env.PORT || 3001;
+//============================================================
+// Middleware
+//============================================================
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-// Serve up static assets (usually on heroku)
+app.use(routes)
+//============================================================
+// MongoDB Connection
+//============================================================
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/petDB";
+mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
+//============================================================
+// Get Info On DB Connection
+//============================================================
+let db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function() {
+  console.log("Connected to database.")
+});
+//============================================================
+// Serve up static assets (Heroku Deployment Essential)
+//============================================================
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
-
-// Define API routes here
-
+//============================================================
 // Send every other request to the React app
-// Define any API routes before this runs
+//============================================================
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
-
+//============================================================
+// Listener
+//============================================================
 app.listen(PORT, () => {
   console.log(`🌎 ==> API server now on port ${PORT}!`);
 });
