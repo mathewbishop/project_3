@@ -1,5 +1,3 @@
-
 module.exports = {
-    Pet: require("./petProfileSchema")
-  };
-  
+    PetProfile: require("./petProfileSchema")
+}

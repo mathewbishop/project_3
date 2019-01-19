@@ -4,7 +4,7 @@ import Pet from "../components/Pet";
 import PetForm from "../components/PetForm";
 
 class PetHome extends Component {
-    /*state = {
+    state = {
 
     };
 
@@ -33,7 +33,7 @@ class PetHome extends Component {
             .then(res => this.loadPets())
             .catch(err => console.log(err));
         }
-    };*/
+    };
 
     render() {
         return(

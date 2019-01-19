@@ -1,10 +1,14 @@
+//============================================================
+// Dependencies
+//============================================================
 const router = require("express").Router();
-const petController = require("../../controllers/petController");
-
-// Matches with "/api/pets"
+const petController = require("../../controller/petController");
+//============================================================
+// Get All Pets For 'this' User
+//============================================================
 router.route("/")
-  .get(petController.findAll)
-  
+    .get(petController.findAll)
 
 
-  module.exports = router;
+
+module.exports = router;

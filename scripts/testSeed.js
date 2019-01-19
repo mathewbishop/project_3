@@ -1,7 +1,7 @@
 //============================================================
 // Dependencies
 //============================================================
-const mongoose = require("mongoose");
+const PetProfile = require("../model/petProfileSchema");
 //============================================================
 // Seed
 //============================================================
@@ -12,6 +12,7 @@ mongoose.connect(
 
 const petProfileSeed = [
     {
+        user: "mattyb",
         petName: "Tucker",
         petBirthday: 07-31-2008,
         petType: "Dog",
@@ -28,6 +29,7 @@ const petProfileSeed = [
         careNotes: ""
     },
     {
+        user: "mattyb",
         petName: "Jake",
         petBirthday: 08-01-2008,
         petType: "Dog",
@@ -45,14 +47,14 @@ const petProfileSeed = [
     }
 ];
 
-db.petDB
-  .remove({})
-  .then(() => db.petDB.collection.insertMany(petProfileSeed))
-  .then(data => {
-    console.log(data.result.n + " records inserted!");
-    process.exit(0);
-  })
-  .catch(err => {
-    console.error(err);
-    process.exit(1);
-  });
+function dataTest() {
+    let testProfile = new PetProfile(petProfileSeed[0])
+
+    testProfile.save((err) => {
+        if (err) return console.log(err);
+        else { console.log("Data successfully submitted.") }
+    })
+}
+
+
+module.exports = dataTest;
