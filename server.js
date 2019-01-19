@@ -1,12 +1,13 @@
 //============================================================
 // Dependencies
 //============================================================
-const express = require("express");
 const path = require("path");
+const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
+const routes = require("./routes");
 //============================================================
-// PORT 
+// PORT
 //============================================================
 const PORT = process.env.PORT || 3001;
 //============================================================
@@ -34,11 +35,16 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 //============================================================
+// Routes
+//============================================================
+app.use(app.router);
+routes.initialize(app);
+//============================================================
 // Send every other request to the React app
 //============================================================
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"));
-});
+// app.get("*", (req, res) => {
+//   res.sendFile(path.join(__dirname, "./client/build/index.html"));
+// });
 //============================================================
 // Listener
 //============================================================
