@@ -6,6 +6,7 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const routes = require("./routes");
+const dataTest = require("./model/testSeed");
 //============================================================
 // PORT
 //============================================================
@@ -38,14 +39,10 @@ if (process.env.NODE_ENV === "production") {
 // Routes
 //============================================================
 app.use(routes)
-// app.use(app.router);
-// routes.initialize(app);
 //============================================================
-// Send every other request to the React app
+// Test
 //============================================================
-// app.get("*", (req, res) => {
-//   res.sendFile(path.join(__dirname, "./client/build/index.html"));
-// });
+// dataTest();
 //============================================================
 // Listener
 //============================================================
