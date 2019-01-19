@@ -69,6 +69,7 @@ const petProfileSchema = new Schema({
 
 const Pet = mongoose.model("Pet", petProfileSchema);
 
-articleSchema.plugin(uniqueValidator);
+//articleSchema.plugin(uniqueValidator);
 
 module.exports = Pet;
+

@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import API from "../utils/API"
 import Pet from "../components/Pet";
-import AddBtn from "../components/AddBtn";
+import PetForm from "../components/PetForm";
 
 class PetHome extends Component {
     /*state = {
@@ -39,7 +39,7 @@ class PetHome extends Component {
         return(
             <div>
                 <Pet />
-                <AddBtn />
+                <PetForm />
             </div>
         );
     }

@@ -5,6 +5,11 @@ const mongoose = require("mongoose");
 //============================================================
 // Seed
 //============================================================
+
+mongoose.connect(
+    process.env.MONGODB_URI || "mongodb://localhost/petDB"
+);
+
 const petProfileSeed = [
     {
         petName: "Tucker",
@@ -40,3 +45,14 @@ const petProfileSeed = [
     }
 ];
 
+db.petDB
+  .remove({})
+  .then(() => db.petDB.collection.insertMany(petProfileSeed))
+  .then(data => {
+    console.log(data.result.n + " records inserted!");
+    process.exit(0);
+  })
+  .catch(err => {
+    console.error(err);
+    process.exit(1);
+  });
