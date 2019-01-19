@@ -2,10 +2,13 @@
 // Dependencies
 //============================================================
 const router = require("express").Router();
-const petRoutes = require("./pets");
+const petController = require("../../controller/petController");
 //============================================================
-// Pet Routes
+// Get All Pets For 'this' User
 //============================================================
-router.use("/pets", petRoutes);
+router.route("/")
+    .get(petController.findAll)
 
-module.exports = router; 
+
+
+module.exports = router;
