@@ -4,7 +4,7 @@ import Pet from "../components/Pet";
 import AddBtn from "../components/AddBtn";
 
 class PetHome extends Component {
-    /*state = {
+    state = {
 
     };
 
@@ -15,6 +15,7 @@ class PetHome extends Component {
     loadPets = () => {
         API.getPets()
             .then(res =>
+                console.log(res),
                 this.setState({})
             )
             .catch(err => console.log(err));
@@ -33,7 +34,7 @@ class PetHome extends Component {
             .then(res => this.loadPets())
             .catch(err => console.log(err));
         }
-    };*/
+    };
 
     render() {
         return(
