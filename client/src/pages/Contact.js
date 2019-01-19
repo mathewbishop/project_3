@@ -1,8 +1,12 @@
 import React from "react";
+import AddBtn from "../components/AddBtn";
 
 function Contact () {
     return(
-        <h1>Contacts Page</h1>
+        <div>
+            <h1>Contacts Page</h1>
+            <AddBtn />
+        </div>
     )
 }
 
