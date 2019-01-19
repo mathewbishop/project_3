@@ -6,7 +6,7 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const routes = require("./routes");
-const dataTest = require("./model/testSeed");
+const dataTest = require("./scripts/testSeed");
 //============================================================
 // PORT
 //============================================================

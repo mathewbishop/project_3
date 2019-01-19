@@ -2,17 +2,12 @@
 // Dependencies
 //============================================================
 const router = require("express").Router();
-const PetProfile = require("../../model/petProfileSchema");
+const petController = require("../../controller/petController");
 //============================================================
 // Get All Pets For 'this' User
 //============================================================
 router.route("/")
-    .get(
-        PetProfile.find()
-            .then(pets => {
-            res.json(pets)
-        })
-    )
+    .get(petController.findAll)
 
 
 
