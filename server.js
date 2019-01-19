@@ -4,22 +4,29 @@
 const express = require("express");
 const path = require("path");
 const app = express();
-const db = require("./model/dbConnection")
-const baseRoutes = require("./controller/index");
+const mongoose = require("mongoose");
 //============================================================
 // PORT 
 //============================================================
 const PORT = process.env.PORT || 3001;
 //============================================================
-// DB Connection
-//============================================================
-app.use(db)
-//============================================================
 // Middleware
 //============================================================
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-// app.use(baseRoutes)  UNCOMMENT!!!
+//============================================================
+// MongoDB Connection
+//============================================================
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/petDB";
+mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
+//============================================================
+// Get Info On DB Connection
+//============================================================
+let db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function() {
+  console.log("Connected to database.")
+});
 //============================================================
 // Serve up static assets (Heroku Deployment Essential)
 //============================================================
