@@ -5,6 +5,7 @@ import API from "../../utils/API";
 class Pet extends Component {
     state = {pets: []}
 
+
     componentDidMount() {
         this.loadPets();
     };
@@ -25,8 +26,8 @@ class Pet extends Component {
                         {this.state.pets.map(pet =>
                             <div className="card">
                                 <div className="card-body">
-                                <h5>Name: {pet.petName}}</h5>
-                                <p>BDay: {pet.birthDay}</p>
+                                <h5>Name: {pet.petName}</h5>
+                                <p>BDay: {pet.petBirthday}</p>
                                 </div>
                             </div>
                     )}
