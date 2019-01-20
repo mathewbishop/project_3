@@ -23,7 +23,6 @@ class PetHome extends Component {
     };
 
     componentDidMount(){
-        console.log("componentDidMount");
         this.loadPets();
     };
 
@@ -31,20 +30,21 @@ class PetHome extends Component {
         console.log("loadPets");
         API.getAllPets()
             .then(res =>{
-
                 console.log(res.data);
                 this.setState({ pets: res.data})}
             )
             .catch(err => console.log(err));
     };
 
-    /*handleInputChange = events => {
+    /* Function related to form
+    handleInputChange = events => {
         const { name, value } = event.target;
         this.setState({
             [name]: value
         });
     };*/
 
+    /* Function for the add pet form unsure if this will need to live in the modal component */
     handleFormSubmit = event => {
         event.preventDefault();
         if (this.state.name) {
@@ -71,9 +71,9 @@ class PetHome extends Component {
 
     render() {
         console.log("Render Pethome");
+        console.log(this.state.pets);
         return(
             <div>
-                {console.log(this.state.pets)};
                 {this.state.pets.length ? (
                     <Pet>
                         <h5>Name: {this.pets.petName}</h5> 

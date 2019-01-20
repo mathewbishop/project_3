@@ -7,10 +7,6 @@ const mongoose = require("mongoose");
 // Seed
 //============================================================
 
-mongoose.connect(
-    process.env.MONGODB_URI || "mongodb://localhost/petDB"
-);
-
 const petProfileSeed = [
     {
         user: "mattyb",
