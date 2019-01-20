@@ -1,10 +1,10 @@
 import React from "react";
 import "./style.css";
 
-function AddBtn() {
+function AddBtn(props) {
     return(
         <div className="addWrapper">
-            <span className="add-btn" role="button" tabIndex="0">
+            <span className="add-btn" {...props} role="button" tabIndex="0">
                 +
             </span>
         </div>

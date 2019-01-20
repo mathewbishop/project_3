@@ -1,10 +1,17 @@
-import React from "react";
+import React, {Component} from "react";
 import "./style.css";
 
-/*function ContactCard() {
-    return(
-        
-    );
+class ContactCard extends Component {
+    render() {
+        return(
+            <div className="card">
+                <div className="card-body contactCard">
+                    <h5>Contact Name</h5>
+                    <p>Contact Phone #</p>
+                </div>
+            </div>
+        );
+    }
 }
 
-export default ContactCard;*/
+export default ContactCard;

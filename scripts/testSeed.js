@@ -5,6 +5,11 @@ const PetProfile = require("../model/petProfileSchema");
 //============================================================
 // Seed
 //============================================================
+
+mongoose.connect(
+    process.env.MONGODB_URI || "mongodb://localhost/petDB"
+);
+
 const petProfileSeed = [
     {
         user: "mattyb",
