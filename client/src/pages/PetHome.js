@@ -15,8 +15,8 @@ class PetHome extends Component {
     loadPets = () => {
         API.getPets()
             .then(res =>
-                // this.setState({})
-                console.log(res)
+                this.setState({ pets: res.data })
+                // console.log(res)
             )
             .catch(err => console.log(err));
     };
