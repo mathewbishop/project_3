@@ -9,18 +9,17 @@ class PetHome extends Component {
     };
 
     componentDidMount(){
-        let loadPets = () => {
-            API.getPets()
-                .then(res =>
-                    // this.setState({})
-                    console.log(res)
-                )
-                .catch(err => console.log(err));
-        };
-        loadPets()
+        this.loadPets();
     };
 
-    
+    loadPets = () => {
+        API.getPets()
+            .then(res =>
+                // this.setState({})
+                console.log(res)
+            )
+            .catch(err => console.log(err));
+    };
 
     handleInputChange = events => {
 
