@@ -2,6 +2,7 @@
 // Dependencies
 //============================================================
 const PetProfile = require("../model/petProfileSchema");
+const mongoose = require("mongoose");
 //============================================================
 // Seed
 //============================================================
@@ -26,7 +27,8 @@ const petProfileSeed = [
         insurance: null,
         medication: "Heartguard, Flea and Tick",
         allergies: "Seasonal",
-        careNotes: ""
+        careNotes: "",
+        date: new Date(Date.now())
     },
     {
         user: "mattyb",
@@ -43,7 +45,8 @@ const petProfileSeed = [
         insurance: null,
         medication: "Heartguard, Flea and Tick",
         allergies: "",
-        careNotes: "Separation anxiety."
+        careNotes: "Separation anxiety.",
+        date: new Date(Date.now())
     }
 ];
 
@@ -55,6 +58,18 @@ function dataTest() {
         else { console.log("Data successfully submitted.") }
     })
 }
+
+PetProfile
+  .remove({})
+  .then(() => PetProfile.collection.insertMany(petProfileSeed))
+  .then(data => {
+    console.log(data.result.n + " records inserted!");
+    process.exit(0);
+  })
+  .catch(err => {
+    console.error(err);
+    process.exit(1);
+  });
 
 
 module.exports = dataTest;

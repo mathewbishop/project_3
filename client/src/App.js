@@ -24,12 +24,12 @@ class App extends Component {
           <Switch>
             {/* <Route exact path="/" component={Login} /> */}
             <Route exact path="/Home" component={PetHome} /> 
-            <Route exact path="/NewAccount" component={NewAccount} />
+            {/*<Route exact path="/NewAccount" component={NewAccount} />
             <Route exact path="/PetProfile" component={PetProfile} />
             <Route exact path="/Reminders" component={Reminders} />
             <Route exact path="/Emergency" component={Emergency} />
             <Route exact path="/Contacts" component={Contact} />
-            <Route exact path="/NoMatch" component={NoMatch} />
+            <Route exact path="/NoMatch" component={NoMatch} />*/}
           </Switch>
           <Menu />
         </div>
