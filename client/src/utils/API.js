@@ -14,14 +14,7 @@ export default {
     //     return axios.delete("/api/pets" + id);
     // },
 
-<<<<<<< HEAD
     // savePets: function(petData) {
     //     return axios.post("/api/pets", petData);
     // }
 };
-=======
-    savePets: function(petData) {
-        return axios.post("/api/pets", petData);
-    }
-};
->>>>>>> 0413eb394438d3a8707c658aa0bf7b7ae8ce9691
