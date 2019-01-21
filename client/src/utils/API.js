@@ -2,7 +2,7 @@ import axios from "axios";
 
 export default {
 
-    getPets: function() {
+    getAllPets: function() {
         return axios.get("/api/pets");
     }
 

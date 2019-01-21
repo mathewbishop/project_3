@@ -63,6 +63,9 @@ const petProfileSchema = new Schema({
     },
     careNotes: {
         type: String
+    },
+    addedDate: {
+        type: Date
     }
 })
 
