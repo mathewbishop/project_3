@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import API from "../utils/API"
 import Pet from "../components/Pet";
-import PetForm from "../components/PetForm";
+import PetFormModal from "../components/PetFormModal";
 import PageTitle from "../components/PageTitle";
 import Menu from "../components/Menu";
 
@@ -70,6 +70,7 @@ class PetHome extends Component {
     render() {
         return(
             <section>
+                <PageTitle>Pets</PageTitle>
                 {this.state.pets.length ? (
                     <div>
                         {this.state.pets.map(pet => (
@@ -80,7 +81,8 @@ class PetHome extends Component {
                         ))}
                     </div>
                 ) : (<h3>Add Your Pets</h3>)}
-                {/* <PetForm /> */}
+                <PetFormModal />
+                <Menu />
             </section>
         );
     }
