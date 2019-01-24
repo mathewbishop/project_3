@@ -80,7 +80,7 @@ class PetHome extends Component {
                         ))}
                     </div>
                 ) : (<h3>Add Your Pets</h3>)}
-                <PetForm />
+                <PetFormModal />
                 <Menu />
             </section>
         );
