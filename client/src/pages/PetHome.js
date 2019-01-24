@@ -29,12 +29,8 @@ class PetHome extends Component {
     };
 
     loadPets = () => {
-        console.log("loadPets");
         API.getAllPets()
-            .then(res =>{
-                console.log(res);
-                this.setState({ pets: res})}
-            )
+            .then(res => this.setState({ pets: res.data }))
             .catch(err => console.log(err));
     };
 
@@ -72,20 +68,20 @@ class PetHome extends Component {
     };
 
     render() {
-        console.log("Render Pethome");
-        console.log(this.state.pets);
         return(
-            <div>
-                <PageTitle>Pets</PageTitle>
+            <section>
                 {this.state.pets.length ? (
-                    <Pet>
-                        <h5>Name: {this.pets.petName}</h5> 
-                        <p>Birthday: {this.pets.petBirthday}</p>
-                    </Pet>
-                ): (<h3>Add Your Pets</h3>)}
-                {/*<PetForm />*/}
-                <Menu />
-            </div>
+                    <div>
+                        {this.state.pets.map(pet => (
+                        <Pet key={pet._id}>
+                            <h5>Name: {pet.petName}</h5> 
+                            <p>Birthday: {pet.petBirthday}</p>
+                        </Pet>
+                        ))}
+                    </div>
+                ) : (<h3>Add Your Pets</h3>)}
+                {/* <PetForm /> */}
+            </section>
         );
     }
 }
