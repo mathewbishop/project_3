@@ -2,7 +2,6 @@
 // Dependencies
 //============================================================
 const PetProfile = require("../model/petProfileSchema");
-const mongoose = require("mongoose");
 //============================================================
 // Seed
 //============================================================
@@ -11,7 +10,7 @@ const petProfileSeed = [
     {
         user: "mattyb",
         petName: "Tucker",
-        petBirthday: 07-31-2008,
+        petBirthday: "2008-07-31",
         petType: "Dog",
         breed: "Mix",
         color: "Black",
@@ -29,7 +28,7 @@ const petProfileSeed = [
     {
         user: "mattyb",
         petName: "Jake",
-        petBirthday: 08-01-2008,
+        petBirthday: "2008-08-01",
         petType: "Dog",
         breed: "Silky Terrier",
         color: "Gray",
@@ -46,26 +45,18 @@ const petProfileSeed = [
     }
 ];
 
-function dataTest() {
-    let testProfile = new PetProfile(petProfileSeed[0])
 
-    testProfile.save((err) => {
-        if (err) return console.log(err);
-        else { console.log("Data successfully submitted.") }
-    })
-}
-
-PetProfile
-  .remove({})
-  .then(() => PetProfile.collection.insertMany(petProfileSeed))
-  .then(data => {
-    console.log(data.result.n + " records inserted!");
-    process.exit(0);
-  })
-  .catch(err => {
-    console.error(err);
-    process.exit(1);
-  });
+// PetProfile
+//   .remove({})
+//   .then(() => PetProfile.collection.insertMany(petProfileSeed))
+//   .then(data => {
+//     console.log(data.result.n + " records inserted!");
+//     process.exit(0);
+//   })
+//   .catch(err => {
+//     console.error(err);
+//     process.exit(1);
+//   });
 
 
 module.exports = dataTest;
