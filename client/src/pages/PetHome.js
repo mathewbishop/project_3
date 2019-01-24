@@ -70,6 +70,7 @@ class PetHome extends Component {
     render() {
         return(
             <section>
+                <PageTitle>Pets</PageTitle>
                 {this.state.pets.length ? (
                     <div>
                         {this.state.pets.map(pet => (
