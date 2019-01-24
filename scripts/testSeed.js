@@ -2,7 +2,6 @@
 // Dependencies
 //============================================================
 const PetProfile = require("../model/petProfileSchema");
-const mongoose = require("mongoose");
 //============================================================
 // Seed
 //============================================================
@@ -11,7 +10,7 @@ const petProfileSeed = [
     {
         user: "mattyb",
         petName: "Tucker",
-        petBirthday: 07-31-2008,
+        petBirthday: "2008-07-31",
         petType: "Dog",
         breed: "Mix",
         color: "Black",
@@ -29,7 +28,7 @@ const petProfileSeed = [
     {
         user: "mattyb",
         petName: "Jake",
-        petBirthday: 08-01-2008,
+        petBirthday: "2008-08-01",
         petType: "Dog",
         breed: "Silky Terrier",
         color: "Gray",
