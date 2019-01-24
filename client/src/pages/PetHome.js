@@ -2,6 +2,8 @@ import React, {Component} from "react";
 import API from "../utils/API"
 import Pet from "../components/Pet";
 import PetForm from "../components/PetForm";
+import PageTitle from "../components/PageTitle";
+import Menu from "../components/Menu";
 
 class PetHome extends Component {
     state = {
@@ -30,8 +32,8 @@ class PetHome extends Component {
         console.log("loadPets");
         API.getAllPets()
             .then(res =>{
-                console.log(res.data);
-                this.setState({ pets: res.data})}
+                console.log(res);
+                this.setState({ pets: res})}
             )
             .catch(err => console.log(err));
     };
@@ -74,6 +76,7 @@ class PetHome extends Component {
         console.log(this.state.pets);
         return(
             <div>
+                <PageTitle>Pets</PageTitle>
                 {this.state.pets.length ? (
                     <Pet>
                         <h5>Name: {this.pets.petName}</h5> 
@@ -81,6 +84,7 @@ class PetHome extends Component {
                     </Pet>
                 ): (<h3>Add Your Pets</h3>)}
                 {/*<PetForm />*/}
+                <Menu />
             </div>
         );
     }

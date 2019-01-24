@@ -1,8 +1,15 @@
 import React from "react";
+import PageTitle from "../components/PageTitle";
+import Menu from "../components/Menu";
 
 function Emergency () {
     return(
-        <h1>Emergency Page</h1>
+        <div>
+            <PageTitle>
+                Emergency Info
+            </PageTitle>
+            <Menu />
+        </div>
     )
 }
 

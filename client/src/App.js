@@ -8,9 +8,7 @@ import PetHome from "./pages/PetHome";
 import PetProfile from "./pages/PetProfile";
 import Reminders from "./pages/Reminders";
 import NoMatch from "./pages/NoMatch";
-import Navbar from "./components/Navbar";
-import Menu from "./components/Menu";
-import logo from "./logo.svg";
+import Navbar from "./components/FollowNavbar";
 import "./App.css";
 
 class App extends Component {
@@ -31,7 +29,6 @@ class App extends Component {
             <Route exact path="/Contacts" component={Contact} />
             <Route exact path="/NoMatch" component={NoMatch} />
           </Switch>
-          <Menu />
         </div>
       </Router>
     );
