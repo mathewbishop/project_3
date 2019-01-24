@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import API from "../utils/API"
 import Pet from "../components/Pet";
-import PetForm from "../components/PetForm";
+import PetFormModal from "../components/PetFormModal";
 import PageTitle from "../components/PageTitle";
 import Menu from "../components/Menu";
 
@@ -83,7 +83,7 @@ class PetHome extends Component {
                         <p>Birthday: {this.pets.petBirthday}</p>
                     </Pet>
                 ): (<h3>Add Your Pets</h3>)}
-                {/*<PetForm />*/}
+                <PetFormModal />
                 <Menu />
             </div>
         );
