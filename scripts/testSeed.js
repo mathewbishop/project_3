@@ -45,14 +45,6 @@ const petProfileSeed = [
     }
 ];
 
-function dataTest() {
-    let testProfile = new PetProfile(petProfileSeed[0])
-
-    testProfile.save((err) => {
-        if (err) return console.log(err);
-        else { console.log("Data successfully submitted.") }
-    })
-}
 
 // PetProfile
 //   .remove({})

@@ -2,6 +2,8 @@ import React, {Component} from "react";
 import API from "../utils/API"
 import Pet from "../components/Pet";
 import PetForm from "../components/PetForm";
+import PageTitle from "../components/PageTitle";
+import Menu from "../components/Menu";
 
 class PetHome extends Component {
     state = {
