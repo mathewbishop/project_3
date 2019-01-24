@@ -1,8 +1,15 @@
 import React from "react";
+import PageTitle from "../components/PageTitle";
+import Menu from "../components/Menu";
 
 function Reminders () {
     return(
-        <h1>Reminders Page</h1>
+        <div>
+            <PageTitle>
+                Reminders
+            </PageTitle>
+            <Menu />
+        </div>
     )
 }
 

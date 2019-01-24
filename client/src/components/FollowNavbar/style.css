@@ -1,0 +1,13 @@
+.navbar {
+    background-color: #fff;
+    border-bottom: #EDEAE5 1px solid;
+    text-align: right;
+}
+
+.navLogo {
+    height: 50px;
+}
+
+.NavbarToggler {
+    border: none;
+}
