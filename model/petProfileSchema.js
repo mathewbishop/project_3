@@ -20,7 +20,7 @@ const petProfileSchema = new Schema({
         trim: true
     },
     petBirthday: {
-        type: Date
+        type: String
     },
     petType: {
         type: String,

@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import API from "../utils/API"
 import Pet from "../components/Pet";
-import PetForm from "../components/PetForm";
+import PetFormModal from "../components/PetFormModal";
 import PageTitle from "../components/PageTitle";
 import Menu from "../components/Menu";
 
@@ -29,12 +29,8 @@ class PetHome extends Component {
     };
 
     loadPets = () => {
-        console.log("loadPets");
         API.getAllPets()
-            .then(res =>{
-                console.log(res);
-                this.setState({ pets: res})}
-            )
+            .then(res => this.setState({ pets: res.data }))
             .catch(err => console.log(err));
     };
 
@@ -72,20 +68,22 @@ class PetHome extends Component {
     };
 
     render() {
-        console.log("Render Pethome");
-        console.log(this.state.pets);
         return(
-            <div>
+            <section>
                 <PageTitle>Pets</PageTitle>
                 {this.state.pets.length ? (
-                    <Pet>
-                        <h5>Name: {this.pets.petName}</h5> 
-                        <p>Birthday: {this.pets.petBirthday}</p>
-                    </Pet>
-                ): (<h3>Add Your Pets</h3>)}
-                {/*<PetForm />*/}
+                    <div>
+                        {this.state.pets.map(pet => (
+                        <Pet key={pet._id}>
+                            <h5>Name: {pet.petName}</h5> 
+                            <p>Birthday: {pet.petBirthday}</p>
+                        </Pet>
+                        ))}
+                    </div>
+                ) : (<h3>Add Your Pets</h3>)}
+                <PetFormModal />
                 <Menu />
-            </div>
+            </section>
         );
     }
 }

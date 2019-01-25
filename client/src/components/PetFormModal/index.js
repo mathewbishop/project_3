@@ -1,10 +1,10 @@
 import React, {Component} from "react";
 import "./style.css";
 import { Button, Modal, ModalHeader, ModalBody } from "reactstrap";
-import { Form, FormGroup, Label, Input, FormText } from "reactstrap";
 import AddBtn from "../AddBtn";
+import AddPetForm from "../AddPetForm";
 
-class PetForm extends Component {
+class PetFormModal extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -27,13 +27,7 @@ class PetForm extends Component {
                 <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
                     <ModalHeader className="formHeader"toggle={this.toggle} close={closeBtn}>Add A Pet</ModalHeader>
                     <ModalBody>
-                        <Form>
-                            <FormGroup>
-                                <Label for="petName">Pet's Name</Label>
-                                <Input type="text" name="petName" id="petName" />
-                            </FormGroup>
-                            <Button className="submitBtn" onClick={this.toggle}>Submit</Button>
-                        </Form>
+                        <AddPetForm />
                     </ModalBody>
                 </Modal> 
             </div>
@@ -41,4 +35,4 @@ class PetForm extends Component {
     }       
 }
 
-export default PetForm;
+export default PetFormModal;
