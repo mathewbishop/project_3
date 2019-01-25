@@ -1,0 +1,57 @@
+.btnGroup {
+    background: #fff;
+    text-align: center;
+    height: 60px;
+    border-radius: 0;
+}
+
+.homeBtn {
+    background-color: rgb(106, 209, 180);
+}
+
+.remBtn {
+    background-color: #058a96;
+}
+
+.contBtn {
+    background-color: rgb(167, 166, 164);
+}
+
+.emerBtn {
+    background-color: rgb(230, 216, 92);
+}
+
+.homeBtn:hover {
+    background-color: rgb(73, 175, 146);
+}
+
+.remBtn:hover {
+    background-color: #046169;
+}
+
+.contBtn:hover {
+    background-color: rgb(122, 122, 121);
+}
+
+.emerBtn:hover {
+    background-color: rgb(187, 176, 75);
+}
+
+.menuBtn {
+    width: 100px;
+    border-radius: 0;
+    border: none;
+    height: 100%;
+}
+
+.menuImg {
+    height: 45px;
+}
+
+.wrapper {
+    display: block;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
