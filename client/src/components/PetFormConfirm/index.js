@@ -78,7 +78,7 @@ class PetFormConfirm extends Component {
                         <ListGroupItemText>{careNotes}</ListGroupItemText>
                     </ListGroupItem>
                 </ListGroup>
-                <Button color="info" onCLick={this.back}>Back</Button>{' '}
+                <Button color="info" onClick={this.back}>Back</Button>{' '}
                 <Button color="info" onClick={this.continue}>Confirm & Continue</Button>
             </div>
         );

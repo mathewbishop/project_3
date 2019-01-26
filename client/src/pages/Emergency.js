@@ -10,7 +10,7 @@ function Emergency () {
                 Emergency Info
             </PageTitle>
             {/* https://www.google.com/maps/search/pet+hospital+near+me/ */}
-            <Button id="toggler">Trauma</Button>
+            <Button id="toggler" style={{width: "80%", marginBottom: "5px", marginLeft: "10%"}}>Trauma</Button>
             <UncontrolledCollapse toggler="#toggler">
                 <Card>
                     <CardBody>
@@ -18,7 +18,7 @@ function Emergency () {
                     </CardBody>
                 </Card>
             </UncontrolledCollapse>
-            <Button id="toggler2">Trauma</Button>
+            <Button id="toggler2" style={{width: "80%", marginBottom: "5px", marginLeft:"10%"}}>Trauma</Button>
             <UncontrolledCollapse toggler="#toggler2">
                 <Card>
                     <CardBody>
