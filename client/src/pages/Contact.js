@@ -3,6 +3,7 @@ import AddBtn from "../components/AddBtn";
 import ContactSection from "../components/ContactSection";
 import PageTitle from "../components/PageTitle";
 import Menu from "../components/Menu";
+import ContactModal from "../components/ContactModal";
 
 function Contact () {
     return(
@@ -11,7 +12,7 @@ function Contact () {
                 Contact
             </PageTitle>
             <ContactSection />
-            <AddBtn />
+            <ContactModal />
             <Menu />
         </div>
     )
