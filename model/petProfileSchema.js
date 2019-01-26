@@ -8,7 +8,7 @@ const mongoose = require("mongoose");
 //============================================================
 const Schema = mongoose.Schema;
 //============================================================
-// Article Schema 
+// PetProfile Schema 
 //============================================================
 const petProfileSchema = new Schema({
     user: {
