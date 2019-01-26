@@ -13,9 +13,8 @@ module.exports = {
             .catch(err => res.status(422).json(err))
     },
     saveOne: function(req, res) {
-        let newPet = req.body;
         db.PetProfile
-            .insert({newPet})
+            .create(req.body)
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err))
     }
