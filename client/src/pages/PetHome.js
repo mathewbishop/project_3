@@ -35,7 +35,6 @@ class PetHome extends Component {
     };
 
     
-
     render() {
         return(
             <section>
