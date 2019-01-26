@@ -4,7 +4,7 @@ export default {
 
     getAllPets: function() {
         return axios.get("/api/pets");
-    }
+    },
 
     // getPets: function(id) {
     //     return axios.get("/api/pets" + id);
@@ -14,7 +14,7 @@ export default {
     //     return axios.delete("/api/pets" + id);
     // },
 
-    // savePets: function(petData) {
-    //     return axios.post("/api/pets", petData);
-    // }
+    savePets: function(petData) {
+        return axios.post("/api/pets", petData);
+    }
 };

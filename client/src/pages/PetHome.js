@@ -9,12 +9,12 @@ class PetHome extends Component {
     state = {
         pets: [],
         petName: "",
-        petBirthday: null,
+        petBirthday: 0,
         petType: "",
         breed: "",
         color: "",
         markings: "",
-        weight: 0,
+        weight: null,
         foodBrand: "",
         microchipNumber: 0,
         rabiesTagNumber: 0,
@@ -34,39 +34,7 @@ class PetHome extends Component {
             .catch(err => console.log(err));
     };
 
-    /* Function related to form
-    handleInputChange = events => {
-        const { name, value } = event.target;
-        this.setState({
-            [name]: value
-        });
-    };*/
-
-    /* Function for the add pet form unsure if this will need to live in the modal component */
-    handleFormSubmit = event => {
-        event.preventDefault();
-        if (this.state.name) {
-            API.savePets({
-                petName: this.state.petName,
-                petBirthday: this.state.petBirthday,
-                petType: this.state.petType,
-                breed: this.state.breed,
-                color: this.state.color,
-                markings: this.state.markings,
-                weight: this.state.weight,
-                foodBrand: this.state.foodBrand,
-                microchipNumber: this.state.microchipNumber,
-                rabiesTagNumber: this.state.rabiesTagNumber,
-                insurance: this.state.insurance,
-                medication: this.state.medication,
-                allergies: this.state.allergies,
-                careNotes: this.state.careNotes
-            })
-            .then(res => this.loadPets())
-            .catch(err => console.log(err));
-        }
-    };
-
+    
     render() {
         return(
             <section>
