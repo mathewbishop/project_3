@@ -46,17 +46,17 @@ const petProfileSeed = [
 ];
 
 
-// PetProfile
-//   .remove({})
-//   .then(() => PetProfile.collection.insertMany(petProfileSeed))
-//   .then(data => {
-//     console.log(data.result.n + " records inserted!");
-//     process.exit(0);
-//   })
-//   .catch(err => {
-//     console.error(err);
-//     process.exit(1);
-//   });
+PetProfile
+  .remove({})
+  .then(() => PetProfile.collection.insertMany(petProfileSeed))
+  .then(data => {
+    console.log(data.result.n + " records inserted!");
+    process.exit(0);
+  })
+  .catch(err => {
+    console.error(err);
+    process.exit(1);
+  });
 
 
-module.exports = dataTest;
+
