@@ -8,7 +8,7 @@ const petController = require("../../controller/petController");
 //============================================================
 router.route("/")
     .get(petController.findAll)
-
+    .post(petController.saveOne)
 
 
 module.exports = router;

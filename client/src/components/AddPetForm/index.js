@@ -6,6 +6,7 @@ import PetFormCare from "../PetFormCare";
 import PetFormMedical from "../PetFormMedical";
 import PetFormConfirm from "../PetFormConfirm";
 import PetFormSuccess from "../PetFormSuccess";
+import API from "../../utils/API";
 
 class AddPetForm extends Component {
 
@@ -44,6 +45,27 @@ class AddPetForm extends Component {
     handleChange = input => e => {
         this.setState({ [input]: e.target.value });
     };
+
+    handleSubmit = () => {
+        API.savePets({
+            petName: this.state.petName,
+            petBirthday: this.state.petBirthday,
+            petType: this.state.petType,
+            breed: this.state.breed,
+            color: this.state.color,
+            markings: this.state.markings,
+            weight: this.state.weight,
+            foodBrand: this.state.foodBrand,
+            microchipNumber: this.state.microchipNumber,
+            rabiesTagNumber: this.state.rabiesTagNumber,
+            insurance: this.state.insurance,
+            medication: this.state.medication,
+            allergies: this.state.allergies,
+            careNotes: this.state.careNotes
+        })
+            .then(res => console.log(res))
+            .catch(err => console.log(err))
+    }
 
     render(){
         const { step } = this.state;
@@ -92,6 +114,7 @@ class AddPetForm extends Component {
                         nextStep={this.nextStep}
                         prevStep={this.prevStep}
                         values={values}
+                        handleSubmit={this.handleSubmit}
                     />
                 );
             case 6:

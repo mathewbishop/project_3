@@ -34,6 +34,7 @@ class PetHome extends Component {
             .catch(err => console.log(err));
     };
 
+    
     render() {
         return(
             <section>
