@@ -1,8 +1,32 @@
 import React, {Component} from "react";
 import "./style.css";
-import { Form, FormGroup, Label, Input, FormText, Button } from "reactstrap";
+import { Form, FormGroup, Label, Input, Button } from "reactstrap";
+import API from '../../utils/API';
 
 class ContactForm extends Component {
+
+    state = {
+        contactName: "",
+        phoneNumber: "",
+        contactCategory: ""
+    };
+
+    handleChange = input => e => {
+        this.setState({ [input]: e.target.value });
+    };
+
+    handleSubmit = e => {
+        e.preventDefault();
+        if (this.state.contactName) {
+            API.saveContacts({
+                contactName: this.contactName,
+                phoneNumber: this.phoneNumber,
+                contactCategory: this.contactCategory
+            })
+            .catch(err => console.log);
+        }
+    };
+
     render() {
         return(
             <div>
@@ -24,7 +48,7 @@ class ContactForm extends Component {
                             <option>Other</option>
                         </Input>
                     </FormGroup>
-                    <Button>Submit</Button>
+                    <Button onClick={this.handleSubmit}>Submit</Button>
                 </Form>
             </div>
         )
