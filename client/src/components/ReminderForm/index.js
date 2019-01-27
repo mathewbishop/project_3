@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import "./style.css";
 import { Form, FormGroup, Label, Input, FormText, Button } from "reactstrap";
+import API from "../../utils/API";
 
 class ReminderForm extends Component{
     
