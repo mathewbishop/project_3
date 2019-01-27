@@ -13,7 +13,7 @@ const Schema = mongoose.Schema;
 const reminderSchema = new Schema({
     reminder: String,
     date: String,
-    userID: [{ type: Schema.Types.ObjectId, ref: PetProfile }]
+    userID: { type: Schema.Types.ObjectId, ref: PetProfile }
 })
 
 const Reminder = mongoose.model("Reminder", reminderSchema);
