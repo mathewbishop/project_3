@@ -6,11 +6,10 @@
   "proxy": "http://localhost:3001/",
   "dependencies": {
     "axios": "^0.18.0",
-    "bootstrap": "^3.4.0",
+    "bootstrap": "^4.2.1",
     "font-awesome": "^4.7.0",
     "moment": "^2.24.0",
     "react": "^16.6.3",
-    "react-bootstrap": "^0.32.4",
     "react-dom": "^16.6.3",
     "react-fontawesome": "^1.6.1",
     "react-router-dom": "^4.3.1",
