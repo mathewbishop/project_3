@@ -67,8 +67,8 @@ const petProfileSchema = new Schema({
     addedDate: {
         type: Date
     },
-    reminders: [{ type: Schema.Types.ObjectId, ref: PetProfile }],
-    contacts: [{ type: Schema.Types.ObjectId, ref: PetProfile }]
+    reminders: [{ type: Schema.Types.ObjectId, ref: "Reminder" }],
+    contacts: [{ type: Schema.Types.ObjectId, ref: "Contact" }]
 })
 
 const PetProfile = mongoose.model("PetProfile", petProfileSchema);
