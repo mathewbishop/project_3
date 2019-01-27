@@ -25,7 +25,7 @@ class ReminderModal extends Component {
             <div>
                 <AddBtn onClick={this.toggle}/>
                 <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
-                    <ModalHeader className="formHeader"toggle={this.toggle} close={closeBtn}> Create a Reminder</ModalHeader>
+                    <ModalHeader className="formHeader" toggle={this.toggle} close={closeBtn}> Create a Reminder</ModalHeader>
                     <ModalBody>
                         <ReminderForm />
                     </ModalBody>

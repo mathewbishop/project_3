@@ -15,21 +15,31 @@ class ReminderForm extends Component{
         this.setState({ [input]: e.target.value});
     };
 
+    handleSubmit= () => {
+        API.saveReminders({
+            time: this.state.time,
+            period: this.state.period,
+            taskName: this.state.taskName,
+            taskNotes: this.state.taskNotes
+        }).then(res=>console.log(res))
+          .catch(err => console.log(err))  
+    }
+
     render() {
 
         return(
             <div>
 
             <FormGroup>
-            <Label for= "taskName">Reminder</Label>
-            <Input name="taskName"></Input>
+            <Label for={this.state.taskName}>Reminder</Label>
+            <Input name={this.state.taskName}></Input>
             </FormGroup>
 
             <FormGroup>
-            <Label for= "taskNotes">Notes</Label>
-            <Input name="taskNotes"></Input>
+            <Label for={this.state.taskNotes}>Notes</Label>
+            <Input name={this.state.taskNotes}></Input>
             </FormGroup>
-            <Button>Submit</Button>
+            <Button onClick={this.handleSubmit}>Submit</Button>
 
             </div>
         )

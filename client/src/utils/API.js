@@ -6,15 +6,15 @@ export default {
         return axios.get("/api/pets");
     },
 
-    // getPets: function(id) {
-    //     return axios.get("/api/pets" + id);
-    // },
-
-    // deletePets: function(id) {
-    //     return axios.delete("/api/pets" + id);
-    // },
-
     savePets: function(petData) {
         return axios.post("/api/pets", petData);
+    },
+
+    getReminders: function() {
+        return axios.get("/api/contacts");
+    },
+
+    getContacts: function() {
+        return axios.get("/api/reminders");
     }
 };
