@@ -5,6 +5,7 @@ class PetFormConfirm extends Component {
 
     submit = () => {
         this.props.handleSubmit();
+        this.props.nextStep();
     }
 
     back = e => {
@@ -77,8 +78,8 @@ class PetFormConfirm extends Component {
                         <ListGroupItemText>{careNotes}</ListGroupItemText>
                     </ListGroupItem>
                 </ListGroup>
-                <Button color="info" onClick={this.back}>Back</Button>{' '}
-                <Button color="info" onClick={this.submit}>Confirm & Continue</Button>
+                <Button className="formBtn" onClick={this.back}>Back</Button>{' '}
+                <Button className="formBtn" onClick={this.submit}>Confirm & Continue</Button>
             </div>
         );
     }

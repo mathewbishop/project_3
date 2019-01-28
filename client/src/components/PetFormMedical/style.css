@@ -1,0 +1,13 @@
+.formBtn {
+    background-color: #026670;
+    color: #FFF;
+    font-family: "Leto", sans-serif;
+    width: 45%;
+    margin-left: 3%;
+    border-radius: 0;
+}
+
+.formBtn:hover {
+    background-color: rgb(106, 209, 180);
+    color: #FFF;
+}

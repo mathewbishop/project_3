@@ -13,20 +13,12 @@ class Reminders extends Component{
 
                 <ReminderModal />
                 
-                <PageTitle />
+                <PageTitle>Reminders</PageTitle>
                 
                 <Menu />
                 
                 <TaskDate />
                 
-                
-
-                
-                
-          
-                
-          
-            
             </div>
         )
     }

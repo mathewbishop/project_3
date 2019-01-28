@@ -24,7 +24,7 @@ class App extends Component {
             <Route exact path="/" component={Login} />
             <Route exact path="/Home" component={PetHome} /> 
             <Route exact path="/NewAccount" component={NewAccount} />
-            <Route exact path="/PetProfile" component={PetProfile} />
+            {/*<Route exact path="/PetProfile" component={PetProfile} />*/}
             <Route exact path="/Reminders" component={Reminders} />
             <Route exact path="/Emergency" component={Emergency} />
             <Route exact path="/Contacts" component={Contact} />
