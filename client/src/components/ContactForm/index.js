@@ -24,27 +24,35 @@ class ContactForm extends Component {
 
     initAutocomplete = () => {
       
-        this.autocomplete = new window.google.maps.places.AutocompleteService();
-        this.places = new window.google.maps.places.PlacesService(document.createElement('div'));
+        //this.autocomplete = new window.google.maps.places.AutocompleteService();
+        //this.places = new window.google.maps.places.PlacesService(document.createElement('div'));
         console.log("init");
 
         console.log(this);
         console.log(this.places);
         console.log(this);
-        if (navigator.geolocation) {
-            console.log(this);
-            navigator.geolocation.getCurrentPosition((position) => {
-                this.geolocation = new window.google.maps.LatLng(
-                    position.coords.latitude,
-                    position.coords.longitude);
-                this.setState({
-                    hasLocation: true
-                });
-                if(this.state.typedSearch !== null) {
-                    this.fetchPredictions(this.state.typedSearch);
-                }
+        // if (navigator.geolocation) {
+        //     console.log(this);
+            // navigator.geolocation.getCurrentPosition((position) => {
+            //     this.geolocation = new window.google.maps.LatLng(
+            //         position.coords.latitude,
+            //         position.coords.longitude);
+            //     this.setState({
+            //         hasLocation: true
+            //     });
+            //     if(this.state.typedSearch !== null) {
+            //         this.fetchPredictions(this.state.typedSearch);
+            //     }
+            // });
+
+            
+                
+            // );
+        // }
+        API.getLocation()
+            .then(response =>{
+                console.log(response);
             });
-        }
 
     };
 
@@ -54,14 +62,14 @@ class ContactForm extends Component {
         console.log(this.geolocation);
         console.log(value);
     
-        this.autocomplete.getPlacePredictions(
-            {
-                input: value,
-                types: ["establishment"], 
-                location: this.geolocation, 
-                radius: 8000},
-            this.autoCompletCallback
-        ); 
+        // this.autocomplete.getPlacePredictions(
+        //     {
+        //         input: value,
+        //         types: ["establishment"], 
+        //         location: this.geolocation, 
+        //         radius: 8000},
+        //     this.autoCompletCallback
+        // ); 
     };
 
     autoCompletCallback = (predictions, status) =>
@@ -86,12 +94,12 @@ class ContactForm extends Component {
         let selected_id = this.state.suggestions[index].id;
 
         console.log(selected_id);
-        this.places.getDetails(
-            {
-                placeId: selected_id,
-                fields: ['name', 'website', 'formatted_phone_number']
-            }, this.getDetailsCallback
-        );
+        // this.places.getDetails(
+        //     {
+        //         placeId: selected_id,
+        //         fields: ['name', 'website', 'formatted_phone_number']
+        //     }, this.getDetailsCallback
+        // );
     };
 
     getDetailsCallback = (placeResults, status) => {

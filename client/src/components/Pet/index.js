@@ -3,7 +3,7 @@ import "./style.css";
 
 function Pet ({ children }) {
         return(
-            <div className="card">
+            <div className="card petCard">
                 <div className="card-body">
                     {children}
                 </div>

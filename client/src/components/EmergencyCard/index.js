@@ -5,7 +5,7 @@ import {Card, CardBody} from 'reactstrap';
 function EmergencyCard({children}) {
     return(
         <div>
-            <Card>
+            <Card className="emergencyCard">
                 <CardBody className="emergencyText">
                     {children}
                 </CardBody>
