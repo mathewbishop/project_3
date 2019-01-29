@@ -2,7 +2,6 @@
 // Dependencies
 //============================================================
 const mongoose = require("mongoose");
-const PetProfile = require("./petProfileSchema");
 //============================================================
 // Reference to Mongoose Schema constructor
 //============================================================
@@ -11,9 +10,8 @@ const Schema = mongoose.Schema;
 // Reminder Schema 
 //============================================================
 const reminderSchema = new Schema({
-    reminder: String,
-    date: String,
-    userID: { type: Schema.Types.ObjectId, ref: "PetProfile" }
+    taskName: String,
+    taskNotes: String
 })
 
 const Reminder = mongoose.model("Reminder", reminderSchema);

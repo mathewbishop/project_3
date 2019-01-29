@@ -4,10 +4,11 @@
 const router = require("express").Router();
 const petController = require("../../controller/petController");
 //============================================================
-// Get Reminders for 'this' Profile
+// Routes
 //============================================================
 router.route("/")
-    .get(petController.findReminders)
+    .get(petController.getReminders)
+    .post(petController.saveReminder)
 
 
 module.exports = router;

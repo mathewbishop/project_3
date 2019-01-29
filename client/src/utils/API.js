@@ -12,6 +12,10 @@ export default {
 
     saveReminder: function(reminder) {
         return axios.post("/api/reminders", reminder);
+    },
+
+    fetchReminders: function() {
+        return axios.get("/api/reminders");
     }
 
 };

@@ -19,9 +19,17 @@ module.exports = {
             .catch(err => res.status(422).json(err))
     }, 
     saveReminder: function(req, res) {
-        db.Reminder.create(req.body)
+        db.Reminder
+            .create(req.body)
             .then(dbReminder => db.PetProfile.findOneAndUpdate({ user: "mattyb" }, { $push: { reminders: dbReminder._id }}, { new: true }))
             .then(dbPetProfile => res.json(dbPetProfile))
             .catch(err => res.status(422).json(err))
+    },
+    getReminders: function(req, res) {
+        db.PetProfile
+            .find({ user: "mattyb" })
+            .populate("reminders")
+            .then(dbPetProfile => res.json(dbPetProfile))
+            .catch(err => res.json(err))
     }
 }
