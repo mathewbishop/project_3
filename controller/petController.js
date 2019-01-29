@@ -17,19 +17,33 @@ module.exports = {
             .create(req.body)
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err))
-    },
-    findContacts: function(req, res) {
-        db.PetProfile
-            .find({})
-            .populate("contacts")
-            .then(dbContacts => res.json(dbContacts))
+    }, 
+    saveReminder: function(req, res) {
+        db.Reminder
+            .create(req.body)
+            .then(dbReminder => db.PetProfile.findOneAndUpdate({ user: "mattyb" }, { $push: { reminders: dbReminder._id }}, { new: true }))
+            .then(dbPetProfile => res.json(dbPetProfile))
             .catch(err => res.status(422).json(err))
     },
-    findReminders: function(req, res) {
+    getReminders: function(req, res) {
         db.PetProfile
-            .find({})
+            .find({ user: "mattyb" })
             .populate("reminders")
-            .then(dbReminders => res.json(dbReminders))
+            .then(dbPetProfile => res.json(dbPetProfile))
+            .catch(err => res.json(err))
+    },
+    saveContact: function(req, res) {
+        db.Contact
+            .create(req.body)
+            .then(dbContact => db.PetProfile.findOneAndUpdate({ user: "mattyb" }, { $push: { contacts: dbContact._id }}, { new: true }))
+            .then(dbPetProfile => res.json(dbPetProfile))
             .catch(err => res.status(422).json(err))
+    },
+    getContacts: function(req, res) {
+        db.PetProfile
+            .find({ user: "mattyb" })
+            .populate("contacts")
+            .then(dbPetProfile => res.json(dbPetProfile))
+            .catch(err => res.json(err))
     }
 }

@@ -10,11 +10,11 @@ export default {
         return axios.post("/api/pets", petData);
     },
 
-    getReminders: function() {
-        return axios.get("/api/contacts");
+    saveReminder: function(reminder) {
+        return axios.post("/api/reminders", reminder);
     },
 
-    getContacts: function() {
+    fetchReminders: function() {
         return axios.get("/api/reminders");
     },
 
@@ -22,4 +22,5 @@ export default {
         return axios.get("https://follow3.herokuapp.com/https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyCaMSi6l2hlOVydP7rSq991gyuxNPSqGio",
             {headers:{"Access-Control-Allow-Origin": "*"}})
     }
+
 };
