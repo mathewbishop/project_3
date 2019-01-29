@@ -19,7 +19,7 @@ class PetFormBasics extends Component {
                 </FormGroup>
                 <FormGroup>
                     <Label for="petBirthday">Birthday: </Label>
-                    <Input type="date" name="petBirthday" id="petBirthday" onChange={handleChange('petBirthday')} defaultValue={values.petBirthday} placeholder="mm/dd/yyyy" />
+                    <Input type="date" name="petBirthday" id="petBirthday" onChange={handleChange('petBirthday')} defaultValue={values.petBirthday} placeholder="mm/dd/yyyy" style={{height: "100%"}} />
                 </FormGroup>
                 <FormGroup>
                     <Label for="petType">Type: </Label>

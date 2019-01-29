@@ -26,7 +26,7 @@ class App extends Component {
             <Route exact path="/Reminders" component={Reminders} />
             <Route exact path="/Emergency" component={Emergency} />
             <Route exact path="/Contacts" component={Contact} />
-            <Route exact path="/NoMatch" component={NoMatch} />
+            <Route component={NoMatch} />
           </Switch>
           <Footer />
         </div>
