@@ -10,11 +10,12 @@ export default {
         return axios.post("/api/pets", petData);
     },
 
-    getReminders: function() {
-        return axios.get("/api/contacts");
+    saveReminder: function(reminder) {
+        return axios.post("/api/reminders", reminder);
     },
 
-    getContacts: function() {
+    fetchReminders: function() {
         return axios.get("/api/reminders");
     }
+
 };
