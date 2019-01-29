@@ -30,8 +30,8 @@ class PetFormCare extends Component {
                     <Label for="allergies">Allergies: </Label>
                     <Input type="text" name="allergies" id="allergies" onChange={handleChange('allergies')} defaultValue={values.allergies} placeholder="Seasonal? Food? Etc?" />
                 </FormGroup>
-                <Button color="info" onClick={this.back}>Back</Button>{" "}
-                <Button color="info" onClick={this.continue}>Continue</Button>
+                <Button className="formBtn" onClick={this.back}>Back</Button>{" "}
+                <Button className="formBtn" onClick={this.continue}>Continue</Button>
             </React.Fragment>
         )
     }
