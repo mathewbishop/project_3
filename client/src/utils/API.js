@@ -8,6 +8,10 @@ export default {
 
     savePets: function(petData) {
         return axios.post("/api/pets", petData);
+    },
+
+    saveReminder: function(reminder) {
+        return axios.post("/api/reminders", reminder);
     }
 
 };
