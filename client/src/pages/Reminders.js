@@ -4,6 +4,8 @@ import Menu from "../components/Menu";
 import TaskDate from "../components/TaskDate";
 import ReminderModal from "../components/ReminderModal";
 import API from "../utils/API";
+import Navbar from "../components/FollowNavbar";
+
 
 class Reminders extends Component{
 
@@ -27,30 +29,16 @@ class Reminders extends Component{
     render() {
 
         return(
-
-            <section>
-                <ReminderModal />
-                
-                <PageTitle />
-                
-                {/* {this.state.reminders.length ? (
-                    <div>
-                        {this.state.reminders.map(reminder => (
-                        <div key={reminder._id}>
-                            <h5>{reminder.taskName}</h5> 
-                            <p>{reminder.taskNotes}</p>
-                        </div>
-                        ))}
-                    </div>
-                ) : (<h3>Add Your Pets</h3>)} */}
-
+            <div>
+                <Navbar />
+                <div style={{height: "100%", minHeight: "80vh", display: "block", overflow: "scroll"}}>
+                    <PageTitle>Reminders</PageTitle>
+                    <TaskDate />
+                    <ReminderModal />
+                </div>
                 <Menu />
-                
-                <TaskDate />
-                
-            </section>
-    
-        )                          
+            </div>
+        )
     }
 
 

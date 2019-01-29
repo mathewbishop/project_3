@@ -29,7 +29,7 @@ class PetFormBasics extends Component {
                     <Label for="breed">Breed: </Label>
                     <Input type="text" name="breed" id="breed" onChange={handleChange('breed')} defaultValue={values.breed} />
                 </FormGroup>
-                <Button color="info" onClick={this.continue}>Continue</Button>
+                <Button className="formBtn" style={{marginLeft: '52%'}} onClick={this.continue}>Continue</Button>
             </React.Fragment>
         )
     }
