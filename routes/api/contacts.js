@@ -7,7 +7,8 @@ const petController = require("../../controller/petController");
 // Get Contacts for 'this' Profile
 //============================================================ 
 router.route("/")
-    .get(petController.findContacts)
+    .get(petController.getContacts)
+    .post(petController.saveContact)
 
 
 module.exports = router;
