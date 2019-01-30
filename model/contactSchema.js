@@ -13,7 +13,8 @@ const Schema = mongoose.Schema;
 const contactSchema = new Schema({
     contactName: String,
     phoneNumber: String,
-    contactCategory: String
+    contactCategory: String,
+    contactWebsite: String
 })
 
 

@@ -8,21 +8,7 @@ import Navbar from "../components/FollowNavbar";
 
 class PetHome extends Component {
     state = {
-        pets: [],
-        petName: "",
-        petBirthday: 0,
-        petType: "",
-        breed: "",
-        color: "",
-        markings: "",
-        weight: null,
-        foodBrand: "",
-        microchipNumber: 0,
-        rabiesTagNumber: 0,
-        insurance: "",
-        medication: "",
-        allergies: "",
-        careNotes: ""
+        pets: []
     };
 
     componentDidMount(){

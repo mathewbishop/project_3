@@ -10,7 +10,7 @@ import Navbar from "../components/FollowNavbar";
 class Reminders extends Component{
 
     state = {
-        user: []
+        reminders: []
     }
 
     componentDidMount(){
@@ -18,9 +18,11 @@ class Reminders extends Component{
     };
 
     loadReminders = () => {
-        API.fetchReminders()
-            // .then(res => this.setState({ user: res.data }))
-            .then(res => console.log(res))
+        API.getReminders()
+            .then(res => { 
+                this.setState({ reminders: res.data[0].reminders })
+            })
+            // .then(res => console.log(res))
             .catch(err => console.log(err));
     };
 
@@ -33,6 +35,9 @@ class Reminders extends Component{
                 <Navbar />
                 <div style={{height: "100%", minHeight: "80vh", display: "block", overflow: "scroll"}}>
                     <PageTitle>Reminders</PageTitle>
+                    {this.state.reminders.map(reminder => {
+                        console.log(reminder)
+                    }) }
                     <TaskDate />
                     <ReminderModal />
                 </div>
