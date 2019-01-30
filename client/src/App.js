@@ -8,7 +8,6 @@ import PetHome from "./pages/PetHome";
 import PetProfile from "./pages/PetProfile";
 import Reminders from "./pages/Reminders";
 import NoMatch from "./pages/NoMatch";
-import Navbar from "./components/FollowNavbar";
 import Footer from "./components/Footer";
 import "./App.css";
 
@@ -19,16 +18,15 @@ class App extends Component {
     return (
       <Router>
         <div>
-          <Navbar />
           <Switch>
             <Route exact path="/" component={Login} />
             <Route exact path="/Home" component={PetHome} /> 
             <Route exact path="/NewAccount" component={NewAccount} />
-            <Route exact path="/PetProfile" component={PetProfile} />
+            {/*<Route exact path="/PetProfile" component={PetProfile} />*/}
             <Route exact path="/Reminders" component={Reminders} />
             <Route exact path="/Emergency" component={Emergency} />
             <Route exact path="/Contacts" component={Contact} />
-            <Route exact path="/NoMatch" component={NoMatch} />
+            <Route component={NoMatch} />
           </Switch>
           <Footer />
         </div>

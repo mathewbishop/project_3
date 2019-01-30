@@ -34,8 +34,8 @@ class PetFormDescription extends Component {
                     <Label for="microchipNumber">Microchip Number: </Label>
                     <Input type="number" name="microchipNumber" id="microchipNumber" onChange={handleChange('microchipNumber')} defaultValue={values.microchipNumber} />
                 </FormGroup>
-                <Button color="info" onClick={this.back}>Back</Button>{" "}
-                <Button color="info" onClick={this.continue}>Continue</Button>
+                <Button className="formBtn" onClick={this.back}>Back</Button>{" "}
+                <Button className="formBtn" onClick={this.continue}>Continue</Button>
             </React.Fragment>
         )
     }

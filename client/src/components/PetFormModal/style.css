@@ -1,8 +1,15 @@
 .formHeader {
     text-align: center;
-    background-color: #EDEAE5;
+    background-color: #026670;
+    color: #FFF;
+    font-family: "Ubuntu", "Leto", sans-serif;
 }
 
 .submitBtn {
     background-color: #026670;
+}
+
+.close {
+    color: #FFF;
+    opacity: 1;
 }

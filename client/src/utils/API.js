@@ -6,23 +6,21 @@ export default {
         return axios.get("/api/pets");
     },
 
-    // getPets: function(id) {
-    //     return axios.get("/api/pets" + id);
-    // },
-
-    // deletePets: function(id) {
-    //     return axios.delete("/api/pets" + id);
-    // },
-
     savePets: function(petData) {
         return axios.post("/api/pets", petData);
     },
 
-    saveReminders: function(reminderData) {
-        return axios.post("/api/reminders", reminderData)
+    saveReminder: function(reminder) {
+        return axios.post("/api/reminders", reminder);
     },
 
-    getReminders: function() {
-        return axios.get("api/reminders")
+    fetchReminders: function() {
+        return axios.get("/api/reminders");
+    },
+
+    getLocation: function(){
+        return axios.get("https://follow3.herokuapp.com/https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyCaMSi6l2hlOVydP7rSq991gyuxNPSqGio",
+            {headers:{"Access-Control-Allow-Origin": "*"}})
     }
+
 };

@@ -19,7 +19,7 @@ class PetFormBasics extends Component {
                 </FormGroup>
                 <FormGroup>
                     <Label for="petBirthday">Birthday: </Label>
-                    <Input type="date" name="petBirthday" id="petBirthday" onChange={handleChange('petBirthday')} defaultValue={values.petBirthday} placeholder="mm/dd/yyyy" />
+                    <Input type="date" name="petBirthday" id="petBirthday" onChange={handleChange('petBirthday')} defaultValue={values.petBirthday} placeholder="mm/dd/yyyy" style={{height: "100%"}} />
                 </FormGroup>
                 <FormGroup>
                     <Label for="petType">Type: </Label>
@@ -29,7 +29,7 @@ class PetFormBasics extends Component {
                     <Label for="breed">Breed: </Label>
                     <Input type="text" name="breed" id="breed" onChange={handleChange('breed')} defaultValue={values.breed} />
                 </FormGroup>
-                <Button color="info" onClick={this.continue}>Continue</Button>
+                <Button className="formBtn" style={{marginLeft: '52%'}} onClick={this.continue}>Continue</Button>
             </React.Fragment>
         )
     }

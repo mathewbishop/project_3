@@ -2,14 +2,13 @@
 // Dependencies
 //============================================================
 const router = require("express").Router();
-const petRoutes = require("./pets");
-const reminderRoutes = require("./reminders");
-const contactRoutes = require("./contacts");
+const petController = require("../../controller/petController");
 //============================================================
-// Pet Routes
+// Routes
 //============================================================
-router.use("/pets", petRoutes);
-router.use("/reminders", reminderRoutes);
-router.use("/contacts", contactRoutes);
+router.route("/")
+    .get(petController.getReminders)
+    .post(petController.saveReminder)
 
-module.exports = router; 
+
+module.exports = router;

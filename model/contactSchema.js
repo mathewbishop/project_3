@@ -13,8 +13,7 @@ const Schema = mongoose.Schema;
 const contactSchema = new Schema({
     contactName: String,
     phoneNumber: String,
-    category: String,
-    userID: [{ type: Schema.Types.ObjectId, ref: PetProfile }]
+    contactCategory: String
 })
 
 

@@ -53,6 +53,10 @@ class NewAccountForm extends Component {
                         <Input type="password" name="userPassword" id="userPassword"></Input>
                     </FormGroup>
                     <FormGroup>
+                        <Label for="userPasswordVerify">Verify Password</Label>
+                        <Input type="password" name="userPasswordVerify" id="userPasswordVerify"></Input>
+                    </FormGroup>
+                    {/* <FormGroup>
                         <Label for="streetAddress">Address</Label>
                         <Input type="text" name="streetAddress" id="streetAddress"></Input>
                     </FormGroup>
@@ -62,17 +66,17 @@ class NewAccountForm extends Component {
                     </FormGroup>
                     <FormGroup>
                         <Label for="state">State</Label>
-                        <Input type="select" name="state" id="state"></Input>
-                            <select></select>
-                            <select></select>
-                            <select></select>
-                            <select></select>
+                        <Input type="select" name="state" id="state">
+                            <option>1</option>
+                            <option>2</option>
+                            
+                        </Input>
                     </FormGroup>
                     <FormGroup>
                         <Label for="zipCode">Zip Code</Label>
                         <Input type="number" name="zipCode" id="zipCode"></Input>
-                    </FormGroup>
-                    <Button onClick={this.handleSubmit}>Submit</Button>
+                    </FormGroup> */}
+                    <Button className="formBtn" style={{marginLeft: "53%", marginBottom: "30px"}} onClick={this.handleSubmit}>Submit</Button>
                 </Form>
             </div>
         )

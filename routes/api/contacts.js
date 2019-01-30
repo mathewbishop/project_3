@@ -4,11 +4,11 @@
 const router = require("express").Router();
 const petController = require("../../controller/petController");
 //============================================================
-// Routes
-//============================================================
+// Get Contacts for 'this' Profile
+//============================================================ 
 router.route("/")
-    .get(petController.findAll)
-    .post(petController.saveOne)
+    .get(petController.getContacts)
+    .post(petController.saveContact)
 
 
 module.exports = router;

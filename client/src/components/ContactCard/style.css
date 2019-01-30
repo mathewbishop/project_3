@@ -1,3 +1,6 @@
 .contactCard{
-    
+    margin: 30px;
+    box-shadow: 3px 3px #EDEAE5;
+    border: 1px solid #EDEAE5;
 }
+

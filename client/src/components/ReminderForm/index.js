@@ -1,19 +1,27 @@
 import React, {Component} from "react";
 import "./style.css";
 import { Form, FormGroup, Label, Input, FormText, Button } from "reactstrap";
-import API from "../../utils/API"
+import API from "../../utils/API";
 
 class ReminderForm extends Component{
     
     state = {
-        time: 0,
         taskName: "",
         taskNotes: ""
     };
 
     handleChange = input => e => {
-        this.setState({ [input]: e.target.value});
+        this.setState({ [input]: e.target.value });
     };
+    
+
+    handleSubmit= () => {
+        API.saveReminder({
+            taskName: this.state.taskName,
+            taskNotes: this.state.taskNotes
+        }).then(res=>console.log(res))
+          .catch(err => console.log(err))  
+    }
 
     handleSubmit= () => {
         API.saveReminders({
@@ -30,18 +38,13 @@ class ReminderForm extends Component{
             <div>
 
             <FormGroup>
-            <Label for= "taskName">Reminder</Label>
-            <Input name={this.state.taskName}></Input>
+            <Label for="taskName">Reminder</Label>
+            <Input name="taskName" onChange={this.handleChange("taskName")}></Input>
             </FormGroup>
 
             <FormGroup>
-            <Label for= "taskNotes">Notes</Label>
-            <Input name={this.state.taskNotes}></Input>
-            </FormGroup>
-
-            <FormGroup>
-            <Label for= "time">Time of Event</Label>
-            <Input type="time" name={this.state.time}></Input>
+            <Label for="taskNotes">Notes</Label>
+            <Input name="taskNotes" onChange={this.handleChange("taskNotes")}></Input>
             </FormGroup>
             <Button onClick={this.handleSubmit}>Submit</Button>
 
