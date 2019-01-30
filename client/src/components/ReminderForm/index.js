@@ -23,6 +23,15 @@ class ReminderForm extends Component{
           .catch(err => console.log(err))  
     }
 
+    handleSubmit= () => {
+        API.saveReminders({
+            time: this.state.time,
+            taskName: this.state.taskName,
+            taskNotes: this.state.taskNotes
+        }).then(res=>console.log(res))
+          .catch(err => console.log(err))  
+    }
+
     render() {
 
         return(
