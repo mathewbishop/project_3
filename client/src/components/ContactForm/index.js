@@ -49,10 +49,8 @@ class ContactForm extends Component {
                 
             // );
         // }
-        API.getLocation()
-            .then(response =>{
-                console.log(response);
-            });
+        // API.getLocation()
+        //     .then(response => console.log(response));
 
     };
 
@@ -119,16 +117,17 @@ class ContactForm extends Component {
     }
 
     handleSubmit = e => {
-        e.preventDefault();
-        if (this.state.contactName) {
-            API.saveContacts({
+        // e.preventDefault()
+        // if (this.state.contactName) {
+            API.saveContact({
                 contactName: this.state.contactName,
                 phoneNumber: this.state.phoneNumber,
                 contactCategory: this.state.contactCategory,
                 contactWebsite: this.state.contactWebsite
             })
-            .catch(err => console.log);
-        }
+            .then(res => console.log(res))
+            .catch(err => console.log(err))
+        // }
     };
 
     render() {

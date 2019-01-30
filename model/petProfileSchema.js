@@ -2,7 +2,6 @@
 // Dependencies
 //============================================================
 const mongoose = require("mongoose");
-// const uniqueValidator = require("mongoose-unique-validator");
 //============================================================
 // Reference to Mongoose Schema constructor
 //============================================================
@@ -72,7 +71,5 @@ const petProfileSchema = new Schema({
 })
 
 const PetProfile = mongoose.model("PetProfile", petProfileSchema);
-
-// petProfileSchema.plugin(uniqueValidator);
 
 module.exports = PetProfile;
