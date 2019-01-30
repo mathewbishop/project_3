@@ -16,5 +16,13 @@ export default {
 
     savePets: function(petData) {
         return axios.post("/api/pets", petData);
+    },
+
+    saveReminders: function(reminderData) {
+        return axios.post("/api/reminders", reminderData)
+    },
+
+    getReminders: function() {
+        return axios.get("api/reminders")
     }
 };
