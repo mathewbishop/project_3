@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import "./style.css";
 import { Form, FormGroup, Label, Input, Button } from "reactstrap";
 import API from '../../utils/API';
+import {Link} from "react-router-dom";
 
 class NewAccountForm extends Component {
 

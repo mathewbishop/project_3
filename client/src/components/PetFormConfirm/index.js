@@ -79,7 +79,7 @@ class PetFormConfirm extends Component {
                     </ListGroupItem>
                 </ListGroup>
                 <Button className="formBtn" onClick={this.back}>Back</Button>{' '}
-                <Button className="formBtn" onClick={this.submit}>Confirm & Continue</Button>
+                <Button className="formBtn" onClick={this.submit}>Confirm</Button>
             </div>
         );
     }

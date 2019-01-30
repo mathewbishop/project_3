@@ -5,6 +5,7 @@ import Logo from "../images/followLogo.svg";
 import Dog from "../images/dogPathCropped.jpg";
 
 
+
 class Login extends Component{
     render(){
         return(
@@ -16,7 +17,7 @@ class Login extends Component{
                 <img src={Logo} alt="Follow Logo" style={{width: "60%", marginLeft: "20%", marginTop: "20px"}}></img>
                 <LoginForm />
                 <div style={{textAlign: "center", marginBottom: "20px"}}>
-                    <Link to="{/NewAccount}" style={{color: "#026670"}}>Create A New Account</Link>
+                    <Link to="/NewAccount" style={{color: "#026670"}}>Create A New Account</Link>
                 </div>
             </div>
         )
