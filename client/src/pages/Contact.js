@@ -5,6 +5,7 @@ import PageTitle from "../components/PageTitle";
 import Menu from "../components/Menu";
 import ContactModal from "../components/ContactModal";
 import Navbar from "../components/FollowNavbar";
+import ContactCard from "../components/ContactCard";
 
 function Contact () {
     return(
@@ -14,7 +15,7 @@ function Contact () {
                 <PageTitle>
                     Contact
                 </PageTitle>
-                <ContactSection />
+                <ContactCard />
                 <ContactModal />
             </div>
             <Menu />

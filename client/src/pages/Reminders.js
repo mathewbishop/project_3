@@ -35,9 +35,9 @@ class Reminders extends Component{
                 <Navbar />
                 <div style={{height: "100%", minHeight: "80vh", display: "block", overflow: "scroll"}}>
                     <PageTitle>Reminders</PageTitle>
-                    {this.state.reminders.map(reminder => {
+                    {this.state.reminders.map(reminder => 
                         console.log(reminder)
-                    }) }
+                    ) }
                     <TaskDate />
                     <ReminderModal />
                 </div>

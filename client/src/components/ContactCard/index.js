@@ -8,6 +8,10 @@ class ContactCard extends Component {
         contacts: []
     }
 
+    componentDidMount() {
+        this.loadContacts()
+    }
+
     loadContacts = () => {
         API.getContacts()
         .then(res => { 
@@ -21,17 +25,9 @@ class ContactCard extends Component {
     render() {
         return(
             <div className="card">
-            {this.state.contacts.map(contact => {
-                        console.log(contact)
-                    }) }
-                {/* // <div className="card-body contactCard">
-                //     <h5>Contact Name: {contact.contactName}</h5>
-                //     <p>Contact Phone # {contact.phoneNumber}</p>
-                //     <p>Website: {contact.contactWebsite}</p>
-                // </div> */}
-                
-            
-                
+                {this.state.contacts.map(contact => 
+                    console.log(contact)
+                    ) }
             </div>
         );
     }
