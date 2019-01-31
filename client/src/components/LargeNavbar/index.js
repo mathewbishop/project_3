@@ -13,7 +13,7 @@ class LargeNavbar extends Component {
             <div className="largeNavbarWrapper">
                 <div className="logoWrapper">
                     <div>
-                        <img src={logo} alt="Follow Logo" style={{width: "18%"}}></img>
+                        <a href="/Home" ><img src={logo} alt="Follow Logo" style={{width: "18%"}}></img></a>
                     </div>
                 </div>
                 <div className="container-extends mx-auto">
