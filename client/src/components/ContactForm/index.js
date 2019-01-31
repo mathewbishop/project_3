@@ -96,51 +96,53 @@ class ContactForm extends Component {
         // this.fetchPredictions(e.target.value);
     // };
 
-    // getDetails = () => {
-    // //     let selected_id = this.state.suggestions[index].id;
-    //         let selected_id = this.state.placeId;
+    getDetails = (placeId) => {
+    //     let selected_id = this.state.suggestions[index].id;
+            // let selected_id = this.state.placeId;
 
-    //         <ReactGoogleMapLoader
-    //             params={{
-    //                 key: API_KEY,
-    //                 libraries: "places, geocode",
-    //                 placeid: selected_id
-    //             }}
-    //             render={googleMaps =>
-    //                googleMaps && ( 
-    //                    console.log(res)
-    //                )}
-    //         />
-    // };
+            // <ReactGoogleMapLoader
+            //     params={{
+            //         key: API_KEY,
+            //         libraries: "places, geocode",
+            //         placeid: selected_id
+            //     }}
+            //     render={googleMaps =>
+            //        googleMaps && ( 
+            //            console.log(res)
+            //        )}
+            // />
+   // };
             
-    //     console.log(selected_id);
-        // this.places.getDetails(
-        //     {
-        //         placeId: selected_id,
-        //         fields: ['name', 'website', 'formatted_phone_number']
-        //     }, this.getDetailsCallback
-        // );
-     //};
+        //console.log(selected_id);
+        var places = new window.google.maps.places.PlacesService(document.createElement('div'));
+        places.getDetails(
+            {
+                placeId: placeId,
+                fields: ['name', 'website', 'formatted_phone_number']
+            }, this.getDetailsCallback
+        );
+     };
 
-    // getDetailsCallback = (placeResults, status) => {
+    getDetailsCallback = (placeResults, status) => {
 
-    //     console.log(placeResults);
-    //     console.log(status);
+        console.log(placeResults);
+        console.log(status);
 
-    //     this.setState({
-    //         contactName: placeResults.name,
-    //         contactWebsite: placeResults.website,
-    //         phoneNumber: placeResults.formatted_phone_number
-    //     });
+        this.setState({
+            contactName: placeResults.name,
+            contactWebsite: placeResults.website,
+            phoneNumber: placeResults.formatted_phone_number,
+            value: placeResults.name
+        });
 
-    //     this.setState({
-    //         suggestions: []
-    //     });
-    // }
+        // this.setState({
+        //     suggestions: []
+        // });
+    }
 
     handleSubmit = e => {
         // e.preventDefault()
-        // if (this.state.contactName) {
+        if (this.state.contactName) {
             API.saveContact({
                 contactName: this.state.contactName,
                 phoneNumber: this.state.phoneNumber,
@@ -149,7 +151,7 @@ class ContactForm extends Component {
             })
             .then(res => console.log(res))
             .catch(err => console.log(err))
-        // }
+         }
     };
 
     handleInputChange(e) {
@@ -160,15 +162,15 @@ class ContactForm extends Component {
         console.log(suggest);
         this.setState({search: "", placeId: suggest.place_id});
         console.log(this.state.placeId);
-       // this.getDetails();
+        this.getDetails(suggest.place_id);
     }
 
     render() {
         const {search, value} = this.state;
         return(
-            <div>
+            <div style={{fontFamily: "Lato"}}>
                 <FormGroup>
-                    <Label for="contactCategory">Category</Label>
+                    <Label for="contactCategory" style={{fontFamily: "Ubuntu"}}>Category</Label>
                     <Input type="select" name="contactCategory" id="contactCategory">
                         <option>Veterinarian</option>
                         <option>Groomer</option>
@@ -183,13 +185,13 @@ class ContactForm extends Component {
                 }}
                 render={googleMaps =>
                    googleMaps && (
-                    <div>
+                    <div style={{fontFamily: "Lato"}}>
                         <ReactGooglePlaceSuggest
-                        autocompletionRequest={{input: search}}
+                        autocompletionRequest={{input: search, types: ["establishment"] }}
                         googleMaps={googleMaps}
                         onSelectSuggest={this.handleSelectSuggest.bind(this)}
                         >
-                            <Label for="contactName">Contact Name</Label>
+                            <Label for="contactName" style={{fontFamily: "Ubuntu"}}>Contact Name</Label>
                             <Input
                                 type="text"
                                 value={value}
@@ -199,6 +201,9 @@ class ContactForm extends Component {
                                 id="contactName"
                                 />
                         </ReactGooglePlaceSuggest>
+                        {this.state.contactName !== null && this.state.contactName !== ""
+                        ?(<div style={{textAlign: "center", paddingTop: "10px"}}><h6 style={{fontFamily:"Ubuntu"}}>Contact Details</h6>{this.state.contactWebsite}<br></br>{this.state.phoneNumber}</div>)
+                        :(<div><p style={{fontSize: "12px", color: "#B0B0B0", marginLeft: "5px"}}>Search Powered by Google</p></div>)}
                     </div>
                     
                 )}

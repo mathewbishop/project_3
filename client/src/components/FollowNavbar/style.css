@@ -11,3 +11,12 @@
 .NavbarToggler {
     border: none;
 }
+
+@media only screen and (min-width: 992px) {
+
+    .navbarWrapper {
+        display: none;
+    }
+
+
+} 

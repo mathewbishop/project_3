@@ -1,0 +1,19 @@
+.largeNavbarWrapper {
+    font-family: "Ubuntu", "Lato", sans-serif;
+}
+
+.logoWrapper {
+    text-align: center;
+    padding: 10px;
+}
+
+
+
+@media only screen and (max-width: 992px) {
+
+    .largeNavbarWrapper {
+        display: none;
+    }
+
+
+} 
