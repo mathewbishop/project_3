@@ -142,7 +142,7 @@ class ContactForm extends Component {
 
     handleSubmit = e => {
         // e.preventDefault()
-        // if (this.state.contactName) {
+        if (this.state.contactName) {
             API.saveContact({
                 contactName: this.state.contactName,
                 phoneNumber: this.state.phoneNumber,
@@ -151,7 +151,7 @@ class ContactForm extends Component {
             })
             .then(res => console.log(res))
             .catch(err => console.log(err))
-        // }
+         }
     };
 
     handleInputChange(e) {
