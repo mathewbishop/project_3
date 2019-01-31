@@ -1,0 +1,28 @@
+.largeNavbarWrapper {
+    text-align: center;
+    font-family: "Ubuntu", "Lato", sans-serif;
+}
+
+.largeLink {
+    font-family: "Ubuntu"; 
+    color: "#FFF"; 
+    background-color: "#058A96"; 
+    margin-right: "10px";
+    margin-left: "10px"
+}
+
+.logoWrapper {
+    height: "60px";
+    padding: 10px;
+}
+
+
+
+@media only screen and (max-width: 992px) {
+
+    .largeNavbarWrapper {
+        display: none;
+    }
+
+
+} 
