@@ -34,7 +34,7 @@ function Emergency () {
                 <UncontrolledCollapse toggler="#toggler4">
                     <EmergencyCard>If you are concerned your pet has eaten something they shouldn't have, call your vet immediately. The most common poisonings are chocolate, grapes/rasins, human medications, lilies including daffodils, rat poisons and slug poisons. These can cause vomiting, diarrhoea, restlessness, staggering, disorientation, convulsions, lethargy, unconsciousness, and dilated pupils.Try to figure out what your pet consumed or was exposed to if at all possible.</EmergencyCard>
                 </UncontrolledCollapse>
-                <Button href="https://maps.google.com/?q=pet+hospital+near+me" target="_blank" style={{width: "70%", marginBottom: "5px", marginTop:"30px", background: "#026670", marginLeft:"15%", borderRadius: "0", boxShadow: "1.5px 1.5px #EDEAE5", fontFamily: "Ubuntu"}}>Find Near Pet Hospitals</Button>
+                <Button href="https://maps.google.com/?q=pet+hospital+near+me" target="_blank" style={{width: "70%", marginBottom: "5px", marginTop:"30px", background: "#026670", marginLeft:"15%", borderRadius: "0", boxShadow: "1.5px 1.5px #EDEAE5", fontFamily: "Ubuntu"}}>Find Nearby Pet Hospitals</Button>
             </div>
             <Menu />
         </div>
