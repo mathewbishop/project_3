@@ -45,7 +45,6 @@ module.exports = {
             .populate("contacts")
             .then(dbPetProfile => {
                 res.json(dbPetProfile)
-                
             })
             .catch(err => res.json(err))
     }
