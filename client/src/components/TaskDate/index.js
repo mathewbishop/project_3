@@ -5,9 +5,10 @@ import Moment from "moment";
 class TaskDate extends Component{
     render() {
         return(
-            <div>
-                <h1>{Moment().format('dddd')}</h1>
+            <div className="taskDiv">
+                <h2>{Moment().format('dddd')}</h2>
                 <p>{Moment().format('LL')}</p>
+                <hr />
             </div>
         );
     }

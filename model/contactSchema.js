@@ -2,7 +2,6 @@
 // Dependencies
 //============================================================
 const mongoose = require("mongoose");
-const PetProfile = require("./petProfileSchema");
 //============================================================
 // Reference to Mongoose Schema constructor
 //============================================================

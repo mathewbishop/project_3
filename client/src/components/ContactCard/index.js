@@ -8,16 +8,16 @@ class ContactCard extends Component {
         contacts: []
     }
 
-    componentDidMount(){
-        this.loadContacts();
-    };
+    componentDidMount() {
+        this.loadContacts()
+    }
 
     loadContacts = () => {
         API.getContacts()
          .then(res => { 
             this.setState({ contacts: res.data[0].contacts })
+            console.log(res.data[0].contacts)
         })
-        //.then(res => console.log(res))
         .catch(err => console.log(err));
     }
 
@@ -25,19 +25,15 @@ class ContactCard extends Component {
     render() {
         return(
             <section>
-            {this.state.contacts.length ? (
-                <div>
-                {this.state.contacts.map(contact => (
+                {this.state.contacts.map(contact => 
                     <div key={contact._id} className="card">
                         <div className="card-body contactCard">
                             <h5>Contact Name: {contact.contactName}</h5>
-                            <p>Contact Phone #: {contact.phoneNumber}</p>
+                            <p>Contact Phone # {contact.phoneNumber}</p>
                             <p>Website: {contact.contactWebsite}</p>
-                        </div> 
-                    </div>
-                    ))}
-                </div>
-                    ) : (<h3>Add Your Contacts</h3>)}
+                        </div>
+                    </div> 
+                )}
             </section>
         );
     }
