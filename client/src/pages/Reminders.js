@@ -22,7 +22,6 @@ class Reminders extends Component{
             .then(res => { 
                 this.setState({ reminders: res.data[0].reminders })
             })
-            // .then(res => console.log(res))
             .catch(err => console.log(err));
     };
 
@@ -37,7 +36,7 @@ class Reminders extends Component{
                     <PageTitle>Reminders</PageTitle>
                     {this.state.reminders.map(reminder => 
                         console.log(reminder)
-                    ) }
+                    )}
                     <TaskDate />
                     <ReminderModal />
                 </div>

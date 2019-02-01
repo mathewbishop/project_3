@@ -24,11 +24,19 @@ class ContactCard extends Component {
 
     render() {
         return(
-            <div className="card">
+            
+            <section>
                 {this.state.contacts.map(contact => 
+                    // <div key={contact._id} className="card">
+                    //     <div className="card-body contactCard">
+                    //         <h5>Contact Name: {contact.contactName}</h5>
+                    //         <p>Contact Phone # {contact.phoneNumber}</p>
+                    //         <p>Website: {contact.contactWebsite}</p>
+                    //     </div>
+                    // </div> 
                     console.log(contact)
-                    ) }
-            </div>
+                )}
+            </section>
         );
     }
 }
