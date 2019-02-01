@@ -27,7 +27,7 @@ class ReminderModal extends Component {
                 <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
                     <ModalHeader className="formHeader" toggle={this.toggle} close={closeBtn}> Create a Reminder</ModalHeader>
                     <ModalBody>
-                        <ReminderForm />
+                        <ReminderForm onSubmitCallback={this.props.onSubmitCallback} />
                     </ModalBody>
                 </Modal> 
             </div>
