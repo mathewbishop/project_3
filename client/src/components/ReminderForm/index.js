@@ -16,19 +16,11 @@ class ReminderForm extends Component{
     
 
     handleSubmit= () => {
-        API.saveReminders({
-            taskName: this.state.taskName,
-            taskNotes: this.state.taskNotes
-        }).then(res=>console.log(res))
-          .catch(err => console.log(err))  
-    }
-
-    handleSubmit= () => {
-        API.saveReminders({
+        API.saveReminder({
             time: this.state.time,
             taskName: this.state.taskName,
             taskNotes: this.state.taskNotes
-        }).then(res=>console.log(res))
+        }).then(res=>this.props.onSubmitCallback())
           .catch(err => console.log(err))  
     }
 
@@ -40,11 +32,6 @@ class ReminderForm extends Component{
             <FormGroup>
             <Label for="taskName">Reminder</Label>
             <Input name="taskName" onChange={this.handleChange("taskName")}></Input>
-            </FormGroup>
-            <FormGroup>
-                
-            <Label for="time">Time</Label>
-            <Input type="time" name="time" onChange={this.handleChange("time")}></Input>
             </FormGroup>
 
             <FormGroup>
