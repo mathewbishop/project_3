@@ -140,8 +140,7 @@ class ContactForm extends Component {
         // });
     }
 
-    handleSubmit = e => {
-        // e.preventDefault()
+    handleSubmit = () => {
         if (this.state.contactName) {
             API.saveContact({
                 contactName: this.state.contactName,

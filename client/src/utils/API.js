@@ -18,8 +18,8 @@ export default {
         return axios.get("/api/reminders");
     },
 
-    saveContact: function() {
-        return axios.post("/api/contacts");
+    saveContact: function(contact) {
+        return axios.post("/api/contacts", contact);
     },
 
     getContacts: function() {
