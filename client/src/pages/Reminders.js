@@ -24,7 +24,6 @@ class Reminders extends Component{
             .then(res => { 
                 this.setState({ reminders: res.data[0].reminders })
             })
-            // .then(res => console.log(res))
             .catch(err => console.log(err));
     };
 

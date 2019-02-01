@@ -27,8 +27,7 @@ class PetProfile extends Component{
         };
     }
 
-        componentDidMount()
-    {
+    componentDidMount() {
         this.loadPets();
     };
     
