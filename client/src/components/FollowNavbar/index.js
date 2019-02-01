@@ -22,9 +22,9 @@ class FollowNavbar extends Component {
 
   render(){
     return (
-      <div>
+      <div className="navbarWrapper">
         <Navbar color="faded" light>
-          <NavbarBrand href="/" className="mr-auto">
+          <NavbarBrand href="/Home" className="mr-auto">
             <img src={logo} alt="Follow Logo" className="navLogo"></img>
           </NavbarBrand>
           <NavbarToggler onClick={this.toggleNavbar} className="mr-2 NavbarToggler" />

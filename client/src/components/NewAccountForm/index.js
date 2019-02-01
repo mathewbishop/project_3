@@ -20,21 +20,21 @@ class NewAccountForm extends Component {
         this.setState({ [input]: e.target.value });
     };
 
-    handleSubmit = e => {
-        e.preventDefault();
-        if (this.state.userName && this.state.userEmail && this.state.userPassword) {
-            API.saveUser({
-                userName: this.userName,
-                userEmail: this.phoneNumber,
-                userPassword: this.userPassword,
-                streetAddress: this.streetAddress,
-                city: this.city,
-                state: this.state,
-                zipCode: this.zipCode
-            })
-            .catch(err => console.log);
-        }
-    };
+    // handleSubmit = e => {
+    //     e.preventDefault();
+    //     if (this.state.userName && this.state.userEmail && this.state.userPassword) {
+    //         API.saveUser({
+    //             userName: this.userName,
+    //             userEmail: this.phoneNumber,
+    //             userPassword: this.userPassword,
+    //             streetAddress: this.streetAddress,
+    //             city: this.city,
+    //             state: this.state,
+    //             zipCode: this.zipCode
+    //         })
+    //         .catch(err => console.log);
+    //     }
+    // };
 
     render(){
         return(
@@ -77,7 +77,7 @@ class NewAccountForm extends Component {
                         <Label for="zipCode">Zip Code</Label>
                         <Input type="number" name="zipCode" id="zipCode"></Input>
                     </FormGroup> */}
-                    <Button className="formBtn" style={{marginLeft: "53%", marginBottom: "30px"}} onClick={this.handleSubmit}>Submit</Button>
+                    <Link to="/Home" ><Button className="formBtn" style={{marginLeft: "53%", marginBottom: "30px"}} onClick={this.handleSubmit}>Submit</Button></Link>
                 </Form>
             </div>
         )
