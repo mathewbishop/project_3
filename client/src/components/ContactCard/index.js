@@ -14,7 +14,7 @@ class ContactCard extends Component {
 
     loadContacts = () => {
         API.getContacts()
-        .then(res => { 
+         .then(res => { 
             this.setState({ contacts: res.data[0].contacts })
             console.log(res.data[0].contacts)
         })
@@ -24,7 +24,6 @@ class ContactCard extends Component {
 
     render() {
         return(
-            
             <section>
                 {this.state.contacts.map(contact => 
                     <div key={contact._id} className="card">
