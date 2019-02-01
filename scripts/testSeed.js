@@ -23,7 +23,9 @@ const petProfileSeed = [
         medication: "Heartguard, Flea and Tick",
         allergies: "Seasonal",
         careNotes: "",
-        date: new Date(Date.now())
+        date: new Date(Date.now()),
+        reminders: [],
+        contacts: [{contactName:"All Creatures Small Animal Hospital", phoneNumber:"9135555555", contactCategory: "Veterinarian", contactWebsite: "www.allcreaturessmallanimalhospital.com"}]
     },
     {
         user: "mattyb",
@@ -41,22 +43,24 @@ const petProfileSeed = [
         medication: "Heartguard, Flea and Tick",
         allergies: "",
         careNotes: "Separation anxiety.",
-        date: new Date(Date.now())
+        date: new Date(Date.now()),
+        reminders: [],
+        contacts: []
     }
 ];
 
 
-// PetProfile
-//   .remove({})
-//   .then(() => PetProfile.collection.insertMany(petProfileSeed))
-//   .then(data => {
-//     console.log(data.result.n + " records inserted!");
-//     process.exit(0);
-//   })
-//   .catch(err => {
-//     console.error(err);
-//     process.exit(1);
-//   });
+PetProfile
+  .remove({})
+  .then(() => PetProfile.collection.insertMany(petProfileSeed))
+  .then(data => {
+    console.log(data.result.n + " records inserted!");
+    process.exit(0);
+  })
+  .catch(err => {
+    console.error(err);
+    process.exit(1);
+  });
 
 
-module.exports = dataTest;
+

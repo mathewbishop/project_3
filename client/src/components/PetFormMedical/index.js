@@ -30,8 +30,8 @@ class PetFormMedical extends Component {
                     <Label for="rabiesTagNumber">Rabies Tag Number: </Label>
                     <Input type="number" name="rabiesTagNumber" id="rabiesTagNumber" onChange={handleChange('rabiesTagNumber')} defaultValue={values.rabiesTagNumber} />
                 </FormGroup>
-                <Button color="info" onClick={this.back}>Back</Button>{" "}
-                <Button color="info" onClick={this.continue}>Continue</Button>
+                <Button className="formBtn" onClick={this.back}>Back</Button>{" "}
+                <Button className="formBtn" onClick={this.continue}>Continue</Button>
             </React.Fragment>
         )
     }

@@ -1,0 +1,10 @@
+.formHeader {
+    text-align: center;
+    background-color: #026670;
+    color: #FFF;
+    font-family: "Ubuntu", "Leto", sans-serif;
+}
+
+.submitBtn {
+    background-color: #026670;
+}

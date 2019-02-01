@@ -3,10 +3,10 @@ import { ListGroup, ListGroupItem, ListGroupItemHeading, ListGroupItemText, Butt
 
 class PetFormConfirm extends Component {
 
-    continue = e => {
-        e.preventDefault();
+    submit = () => {
+        this.props.handleSubmit();
         this.props.nextStep();
-    };
+    }
 
     back = e => {
         e.preventDefault();
@@ -78,8 +78,8 @@ class PetFormConfirm extends Component {
                         <ListGroupItemText>{careNotes}</ListGroupItemText>
                     </ListGroupItem>
                 </ListGroup>
-                <Button color="info" onCLick={this.back}>Back</Button>{' '}
-                <Button color="info" onClick={this.continue}>Confirm & Continue</Button>
+                <Button className="formBtn" onClick={this.back}>Back</Button>{' '}
+                <Button className="formBtn" onClick={this.submit}>Confirm</Button>
             </div>
         );
     }

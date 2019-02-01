@@ -1,0 +1,29 @@
+.suggestions {
+    list-style-type: none;
+    border-bottom: 1px solid #EDEAE5;
+    padding: 12px;
+}
+
+.suggestions:hover {
+    background-color: #9FEDD7;
+    opacity: 0.7;
+}
+
+.suggestions:focus {
+    background-color: #9FEDD7;
+    opacity: 0.7;
+}
+
+.suggestionsDiv {
+    border: 2px solid #026670;
+    padding: 0;
+}
+
+.clickedContact {
+    background-color: #9FEDD7;
+    font-family: "Leto", sans-serif;
+    padding: 10px;
+    font-weight: bold;
+    display: block;
+    margin-top: 15px;
+}

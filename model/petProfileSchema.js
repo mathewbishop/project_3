@@ -2,13 +2,12 @@
 // Dependencies
 //============================================================
 const mongoose = require("mongoose");
-// const uniqueValidator = require("mongoose-unique-validator");
 //============================================================
 // Reference to Mongoose Schema constructor
 //============================================================
 const Schema = mongoose.Schema;
 //============================================================
-// Article Schema 
+// PetProfile Schema 
 //============================================================
 const petProfileSchema = new Schema({
     user: {
@@ -66,11 +65,11 @@ const petProfileSchema = new Schema({
     },
     addedDate: {
         type: Date
-    }
+    },
+    reminders: [{ type: Schema.Types.ObjectId, ref: "Reminder" }],
+    contacts: [{ type: Schema.Types.ObjectId, ref: "Contact" }]
 })
 
 const PetProfile = mongoose.model("PetProfile", petProfileSchema);
-
-// petProfileSchema.plugin(uniqueValidator);
 
 module.exports = PetProfile;

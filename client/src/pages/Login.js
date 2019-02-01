@@ -1,12 +1,21 @@
 import React, {Component} from "react";
-import Navbar from "../components/FollowNavbar";
-import Logo from "../images/followLogo.svg";
+import LoginForm from "../components/LoginForm";
+import {Link} from "react-router-dom";
+import LoginImg from "../components/LoginImg";
+import LargeLogin from "../components/LargeLogin";
+
+
 
 class Login extends Component{
     render(){
         return(
             <div>
-                <img src={Logo} alt="Follow Logo" className="LandingLogo"></img>
+                <LargeLogin />
+                <LoginImg />
+                <LoginForm />
+                <div style={{textAlign: "center", marginBottom: "20px"}}>
+                    <Link to="/NewAccount" style={{color: "#026670"}}>Create A New Account</Link>
+                </div>
             </div>
         )
     };

@@ -1,0 +1,40 @@
+.loginBox {
+    border-radius: 0;
+  }
+  
+  #loginButton {
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 10px;
+    border-radius: 0;
+    background-color: #6ad1b4;
+  }
+  
+  #formDiv {
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: "Lato", sans-serif;
+  }
+
+@media only screen and (min-width: 992px) {
+
+    #formDiv {
+       width: 30%;
+       margin-left: 35%
+       
+    }
+
+
+} 
+
+@media only screen and (max-width: 992px) {
+
+  #formDiv {
+      width: 60%;
+      margin-left: 20%;
+  }
+
+
+} 
