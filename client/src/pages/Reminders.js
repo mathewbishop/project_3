@@ -5,7 +5,9 @@ import TaskDate from "../components/TaskDate";
 import ReminderModal from "../components/ReminderModal";
 import API from "../utils/API";
 import Navbar from "../components/FollowNavbar";
+import ReminderCard from "../components/ReminderCard";
 
+import LargeNavbar from "../components/LargeNavbar"
 
 class Reminders extends Component{
 
@@ -31,14 +33,19 @@ class Reminders extends Component{
 
         return(
             <div>
+                <LargeNavbar />
                 <Navbar />
                 <div style={{height: "100%", minHeight: "80vh", display: "block", overflow: "scroll"}}>
                     <PageTitle>Reminders</PageTitle>
-                    {this.state.reminders.map(reminder => 
-                        console.log(reminder)
-                    )}
                     <TaskDate />
-                    <ReminderModal />
+                    {this.state.reminders.map(reminder => {
+                        return(
+                       <ReminderCard reminder={reminder} />
+                        )
+                   })}
+                    
+
+                    <ReminderModal onSubmitCallback={this.loadReminders} />
                 </div>
                 <Menu />
             </div>

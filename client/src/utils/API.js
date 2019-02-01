@@ -18,17 +18,12 @@ export default {
         return axios.get("/api/reminders");
     },
 
-    saveContact: function() {
-        return axios.post("/api/contacts");
+    saveContact: function(contact) {
+        return axios.post("/api/contacts", contact);
     },
 
     getContacts: function() {
         return axios.get("/api/contacts");
-    },
-
-    getLocation: function(){
-        return axios.get("https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyCaMSi6l2hlOVydP7rSq991gyuxNPSqGio",
-            {headers:{"Access-Control-Allow-Origin": "*"}})
     }
 
 };

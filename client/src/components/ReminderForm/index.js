@@ -17,13 +17,12 @@ class ReminderForm extends Component{
 
     handleSubmit= () => {
         API.saveReminder({
+            time: this.state.time,
             taskName: this.state.taskName,
             taskNotes: this.state.taskNotes
-        })
-        .then(res=>console.log(res))
-        .catch(err => console.log(err))  
+        }).then(res=>this.props.onSubmitCallback())
+          .catch(err => console.log(err))  
     }
-
 
     render() {
 

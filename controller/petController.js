@@ -43,7 +43,10 @@ module.exports = {
         db.PetProfile
             .find({ user: "mattyb" })
             .populate("contacts")
-            .then(dbPetProfile => res.json(dbPetProfile))
+            .then(dbPetProfile => {
+                res.json(dbPetProfile)
+                
+            })
             .catch(err => res.json(err))
     }
 }
