@@ -1,13 +1,16 @@
 import React from "react";
 import "./style.css";
+import {Card, CardBody} from "reactstrap"
 
 function ReminderCard(props) {
     
     return(
-        <div>
+        <Card className="card">
+        <CardBody className="cardBody">
         <h3>{props.reminder.taskName}</h3>
         <p>{props.reminder.taskNotes}</p>
-        </div>
+        </CardBody>
+        </Card>
     );
 }
 

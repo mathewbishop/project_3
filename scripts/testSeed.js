@@ -25,7 +25,7 @@ const petProfileSeed = [
         careNotes: "",
         date: new Date(Date.now()),
         reminders: [],
-        contacts: [{contactName:"All Creatures Small Animal Hospital", phoneNumber:"9135555555", contactCategory: "Veterinarian", contactWebsite: "www.allcreaturessmallanimalhospital.com"}]
+        contacts: []
     },
     {
         user: "mattyb",
