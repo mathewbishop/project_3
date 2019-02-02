@@ -11,7 +11,7 @@ const Profile = (props) => (
       <h3>Birthday: 2008-07-31</h3>
       <h3>Breed: Mix</h3>
       <h3>Color: White</h3>
-      <h3>Markings: White patch on neck.</h3>
+      <h3>Markings: None</h3>
       <h3>Weight: 30lbs</h3>
       <h3>Preferred Food Brand: Wellness</h3>
       <h3>Microchip Number: 123</h3>
