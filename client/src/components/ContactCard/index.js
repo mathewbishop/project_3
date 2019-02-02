@@ -5,32 +5,36 @@ import API from "../../utils/API";
 class ContactCard extends Component {
 
     state = {
-        contacts: []
+        contacts: [],
     }
 
     componentDidMount() {
+        
         this.loadContacts()
+        
     }
 
     loadContacts = () => {
         API.getContacts()
-         .then(res => { 
+         .then(res => {
+             console.log(res.data);
             this.setState({ contacts: res.data[0].contacts })
             console.log(res.data[0].contacts)
         })
         .catch(err => console.log(err));
     }
 
-
     render() {
+        
         return(
+
             <section>
                 {this.state.contacts.map(contact => 
-                    <div key={contact._id} className="card">
+                    <div key={contact._id} className="card contactCardWrapper">
                         <div className="card-body contactCard">
-                            <h5>Contact Name: {contact.contactName}</h5>
-                            <p>Contact Phone # {contact.phoneNumber}</p>
-                            <p>Website: {contact.contactWebsite}</p>
+                            <h5>{contact.contactName}</h5>
+                            <p>Phone # {contact.phoneNumber}</p>
+                            <a href={contact.contactWebsite} target="_blank" style={{color: "#FFF"}}>{contact.contactWebsite}</a>
                         </div>
                     </div> 
                 )}

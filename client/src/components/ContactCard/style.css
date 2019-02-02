@@ -1,6 +1,35 @@
 .contactCard{
-    margin: 30px;
     box-shadow: 3px 3px #EDEAE5;
     border: 1px solid #EDEAE5;
+    background: #058A96;
+    color: #FFF;
+    z-index: 0;
+    position: relative;
+    display: block;
+    margin: 25px 0 10px 0;
 }
 
+.card {
+    border: 0;
+}
+
+@media only screen and (min-width: 992px) {
+
+    .contactCardWrapper {
+       width: 60%;
+       margin-left: 20%
+       
+    }
+
+
+} 
+
+@media only screen and (max-width: 992px) {
+
+  .contactCardWrapper {
+      width: 90%;
+      margin-left: 5%;
+  }
+
+
+} 

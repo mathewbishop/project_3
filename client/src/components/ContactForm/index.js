@@ -10,6 +10,13 @@ const API_KEY = "AIzaSyCaMSi6l2hlOVydP7rSq991gyuxNPSqGio";
 
 class ContactForm extends Component {
 
+    constructor(props) {
+        super(props);
+        this.state = {
+            onSubmit: props.onSubmit
+        };
+    }
+
     state = {
         contactName: "",
         phoneNumber: "",
@@ -17,7 +24,8 @@ class ContactForm extends Component {
         contactWebsite: "",
         search: "",
         value: "",
-        placeId: ""
+        placeId: "",
+        onSubmit: null
     };
 
 
@@ -52,7 +60,10 @@ class ContactForm extends Component {
                 contactCategory: this.state.contactCategory,
                 contactWebsite: this.state.contactWebsite
             })
-            .then(res => console.log(res))
+            .then(res => {
+                console.log(res);
+                this.state.onSubmit();
+            })
             .catch(err => console.log(err))
          }
     }    

@@ -28,7 +28,7 @@ class ContactModal extends Component {
                 <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
                     <ModalHeader className="formHeader"toggle={this.toggle} close={closeBtn} style={{fontFamily: "Lato"}}>Add A Contact</ModalHeader>
                     <ModalBody>
-                        <ContactForm />
+                        <ContactForm onSubmit={this.toggle}/>
                     </ModalBody>
                 </Modal> 
             </div>
