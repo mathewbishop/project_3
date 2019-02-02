@@ -8,7 +8,7 @@ const db = require("../model");
 module.exports = {
     findAll: function(req, res) {
         db.PetProfile
-            .find({ user: "mattyb" })
+            .find({})
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err))
     },
@@ -27,7 +27,7 @@ module.exports = {
     },
     getReminders: function(req, res) {
         db.PetProfile
-            .find({ user: "mattyb" })
+            .find({})
             .populate("reminders")
             .then(dbPetProfile => res.json(dbPetProfile))
             .catch(err => res.json(err))
@@ -41,7 +41,7 @@ module.exports = {
     },
     getContacts: function(req, res) {
         db.PetProfile
-            .find({ user: "mattyb" })
+            .find({})
             .populate("contacts")
             .then(dbPetProfile => {
                 res.json(dbPetProfile)
