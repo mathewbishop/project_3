@@ -10,11 +10,11 @@ const petProfileSeed = [
     {
         user: "mattyb",
         petName: "Tucker",
-        petBirthday: "2008-07-31",
+        petBirthday: "07-31-2008",
         petType: "Dog",
         breed: "Mix",
         color: "Black",
-        markings: "",
+        markings: "White patch under neck.",
         weight: 30,
         foodBrand: "Nature's Recipe",
         microchipNumber: null,
@@ -25,12 +25,12 @@ const petProfileSeed = [
         careNotes: "",
         date: new Date(Date.now()),
         reminders: [],
-        contacts: [{contactName:"All Creatures Small Animal Hospital", phoneNumber:"9135555555", contactCategory: "Veterinarian", contactWebsite: "www.allcreaturessmallanimalhospital.com"}]
+        contacts: []
     },
     {
         user: "mattyb",
         petName: "Jake",
-        petBirthday: "2008-08-01",
+        petBirthday: "08-01-2008",
         petType: "Dog",
         breed: "Silky Terrier",
         color: "Gray",
