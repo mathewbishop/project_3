@@ -1,4 +1,29 @@
 .petCard{
     margin: 30px;
     box-shadow: 3px 3px #EDEAE5;
+    border: 1px solid #EDEAE5;
+    background: #058A96;
+    color: #FFF;
+    border-radius: 0;
 }
+
+@media only screen and (min-width: 992px) {
+
+    .petCard {
+       width: 60%;
+       margin-left: 20%
+       
+    }
+
+
+} 
+
+@media only screen and (max-width: 992px) {
+
+  .petCard {
+      width: 90%;
+      margin-left: 5%;
+  }
+
+
+} 

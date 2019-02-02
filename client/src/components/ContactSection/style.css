@@ -1,13 +1,37 @@
 .categoryName {
     margin-left: 30px;
-    margin-top: 10px;
+    margin-top: 30px;
     margin-bottom: 10px;
     font-family: "Lato", sans-serif;
-    font-size: 24px;
+    font-size: 30px;
 }
 
 .wrappedSection {
     width: 90%;
     margin-left: 5%;
-    border: solid #EDEAE5 1px;
+    border-radius: 0;
+    position: relative;
+    z-index: -1;
+
 }
+
+@media only screen and (min-width: 992px) {
+
+    .wrappedSection {
+       width: 60%;
+       margin-left: 20%
+       
+    }
+
+
+} 
+
+@media only screen and (max-width: 992px) {
+
+  .wrappedSection {
+      width: 90%;
+      margin-left: 5%;
+  }
+
+
+} 

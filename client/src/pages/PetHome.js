@@ -31,13 +31,16 @@ class PetHome extends Component {
                 <LargeNavbar />
                 <Navbar />
                 <div style={{height: "100%", minHeight: "80vh", display: "block", overflow: "scroll"}}>
-                    <PageTitle>Pets</PageTitle>
+                    <PageTitle>Home</PageTitle>
+                    <div style={{textAlign: "center", zIndex: "0", marginTop: "30px"}}>
+                        <h2 style={{fontFamily: "Lato", fontSize: "30px"}}>Pets</h2>
+                    </div>
                     {this.state.pets.length ? (
-                        <div>
+                        <div style={{marginTop: "30px"}}>
                             {this.state.pets.map(pet => (
                             <section>
                             <Pet key={pet._id}>
-                                <h5>Name: {pet.petName}</h5> 
+                                <h5>{pet.petName}</h5> 
                                 <p>Birthday: {pet.petBirthday}</p>
                             </Pet>
                             {/* <div style={{ display: "none" }}>
