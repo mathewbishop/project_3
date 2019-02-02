@@ -8,18 +8,18 @@ const Profile = (props) => (
       <h1 className="display-2">{props.petName}</h1>
       <hr />
       <br />
-      <h3>Birthday:</h3>
-      <h3>Breed:</h3>
-      <h3>Color:</h3>
-      <h3>Markings:</h3>
-      <h3>Weight:</h3>
-      <h3>Preferred Food Brand:</h3>
-      <h3>Microchip Number:</h3>
-      <h3>Rabies Tag Number:</h3>
-      <h3>Insurance:</h3>
-      <h3>Medications:</h3>
-      <h3>Allergies:</h3>
-      <h3>Special Care Notes:</h3>
+      <h3>Birthday: 2008-07-31</h3>
+      <h3>Breed: Mix</h3>
+      <h3>Color: Black</h3>
+      <h3>Markings: White patch on neck.</h3>
+      <h3>Weight: 30lbs</h3>
+      <h3>Preferred Food Brand: Wellness</h3>
+      <h3>Microchip Number: 123</h3>
+      <h3>Rabies Tag Number: 321</h3>
+      <h3>Insurance: None</h3>
+      <h3>Medications: None</h3>
+      <h3>Allergies: Seasonal</h3>
+      <h3>Special Care Notes: None</h3>
     <footer />
   </div>
 )

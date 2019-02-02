@@ -43,8 +43,6 @@ class PetProfile extends Component{
           <div>
             <Profile photo={this.state.photo} />
             <Menu />
-        
-            
           </div>
         )
       }

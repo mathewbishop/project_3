@@ -6,6 +6,7 @@ import PageTitle from "../components/PageTitle";
 import Menu from "../components/Menu";
 import Navbar from "../components/FollowNavbar";
 import LargeNavbar from "../components/LargeNavbar";
+import {Link} from "react-router-dom";
 
 class PetHome extends Component {
     state = {
@@ -39,24 +40,12 @@ class PetHome extends Component {
                         <div style={{marginTop: "30px"}}>
                             {this.state.pets.map(pet => (
                             <section>
+                            <Link to={"/PetProfile"} style={{color: "black"}}>
                             <Pet key={pet._id}>
                                 <h5>{pet.petName}</h5> 
                                 <p>Birthday: {pet.petBirthday}</p>
                             </Pet>
-                            {/* <div style={{ display: "none" }}>
-                                <p>Type: {pet.petType}</p>
-                                <p>Breed: {pet.breed}</p>
-                                <p>Color: {pet.color}</p>
-                                <p>Markings: {pet.markings}</p>
-                                <p>Weight: {pet.weight}</p>
-                                <p>Food Brand: {pet.foodBrand}</p>
-                                <p>Microchip Number: {pet.microchipNumber}</p>
-                                <p>Rabies Tag Number: {pet.rabiesTagNumber}</p>
-                                <p>Insurance: {pet.insurance}</p>
-                                <p>Medication: {pet.medication}</p>
-                                <p>Allergies: {pet.allergies}</p>
-                                <p>Care Notes: {pet.careNotes}</p>
-                            </div> */}
+                            </Link>
                             </section>
                             ))}
                         </div>
