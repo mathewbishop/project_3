@@ -26,11 +26,15 @@ https://follow3.herokuapp.com
 ### Image Credits
 
 Dog on Path - Christal Yuen
+
 Sleeping Dog - Christian Domingues
+
 Dog & Cat - Krista Mangulso
 
 ### Authors
 
 Callie Hart (https://calliehart.github.io/)
+
 Mathew Bishop (https://mathewbishop.com/)
+
 Jordan Beaman (https://jbeaman7.github.io/Portfolio/)
